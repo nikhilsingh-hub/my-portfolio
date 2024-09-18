@@ -1,13 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import Header from './components/Header.js'
-import About from './tabs/About.js';
-import Skills from './tabs/Skills.js';
-import linkedin  from './assets/linkedin.svg'
-import github from  './assets/github.svg'
-import insta from  './assets/instagram.svg'
-import leetcode from  './assets/leetcode.svg'
+import {leetcode, linkedin, github, insta, Header, About, Skills, Projects} from './context.js'
 import AnimatedCursor from "react-animated-cursor"
-import Projects from './tabs/Projects.js'
+import Experience from './tabs/Experience.js'
 
 
 function App() {
@@ -86,6 +80,7 @@ function App() {
       <Header siteLinks={siteLinks}/>
       <About aboutData = {about}/>
       <Skills/>
+      <Experience/>
       <Projects/>
       <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut illum illo alias atque sed impedit, ex nihil vero voluptatum accusamus labore voluptates amet error repellendus quae minus, perspiciatis distinctio fuga.
       Sint blanditiis quisquam vero ex praesentium mollitia nemo magnam fugiat dolore dicta corporis, qui eum officiis tenetur doloremque modi quibusdam delectus itaque tempore impedit et, aliquid exercitationem. Eveniet, culpa corrupti!
