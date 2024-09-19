@@ -20,7 +20,7 @@ const Skills = forwardRef(() => {
   };
 
   return (
-    <div className="border-t-2 border-[#302b63] pt-10 pb-10">
+    <div className="border-t-2 border-[#302b63] pt-10 pb-10 overflow-x-hidden">
       <div className="flex flex-col items-center justify-center gap-4 h-fit">
         <h2 className="tab-title">
           SKILLS

@@ -30,7 +30,7 @@ function ExperienceCard({expInfo}) {
             <img
               src={expInfo.CompanyIcon}
               className='w-10 h-10 object-cover rounded-lg border-2 border-[#873BBF] shadow-md'
-              alt='Valuable Group Logo'
+              alt='Logo'
             />
             <span className='text-[#873BBF] text-2xl font-extrabold uppercase'>
               {expInfo.CompanyName}

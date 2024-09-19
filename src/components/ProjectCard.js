@@ -3,7 +3,7 @@ import github from '../assets/github.svg';
 import isElementVisible from '../hooks/isVisible.js';
 
 function ProjectCard({ project, index }) {
-  const { name, tools, description, githubLink } = project;
+  const { name, tools, description, githublink, image } = project;
   const cardRef = useRef(null);
   const isOnScreen = isElementVisible(cardRef);
   const heightToStick = [7, 11, 15]
@@ -11,12 +11,15 @@ function ProjectCard({ project, index }) {
   return (
     <div ref={cardRef} className={`w-[45%] border-2 border-black rounded-lg sticky overflow-hidden shadow-lg bg-[#161335]  text-white`} style={{ top: `${heightToStick[index]}rem` }}>
       <div className='flex items-center justify-between border-b-2 border-[#873BBF] p-4 text-[#873BBF]'>
-        <a href={githubLink} target='_blank' rel='noopener noreferrer'>
-          <img src={github} className='h-5 w-5' alt="GitHub Link" />
+        <a href={githublink} target='_blank' rel='noopener noreferrer'>
+          <img src={github} className='h-5 w-5 hover:scale-125 hover:rotate-45 transition-all duration-300 ease-in-out' alt="GitHub Link" />
         </a>
         <h2 className='flex-grow text-center font-bold text-xl'>{name}</h2>
       </div>
 
+      <div className='p-5 flex justify-center items-center'>
+        <img src={image} alt="image" className='rounded-lg w-[25vw] h-[25vh]'/>
+      </div>
       {/* Animated Section */}
       <div className={`p-4`}>
         {/* Tools Used */}

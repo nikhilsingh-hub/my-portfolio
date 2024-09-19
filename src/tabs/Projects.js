@@ -1,28 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ProjectCard from '../components/ProjectCard.js'
+import chatImg from '../assets/Chat.png'
 
 function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const projects = [
     {
-      name: 'Travel Agency App', tools: ['xrx', 'yui', 'iocv'], description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ab sequi aliquam totam, dolor numquam autem culpa, quod quisquam reiciendis quae quidem maiores ducimus minima officia aspernatur, maxime adipisci pariatur.
-      Ea, tempore dolor! Eligendi ab sunt saepe unde pariatur excepturi placeat quaerat quas ea. Aspernatur, incidunt animi illo quo consectetur in. Blanditiis nemo nihil a libero, vel reprehenderit alias modi?
-      Corporis, adipisci! Quaerat praesentium exercitationem ut natus, aliquam assumenda illo alias! Magni, eaque, nesciunt repellendus illum et facere iste dicta amet perspiciatis expedita tempore ducimus reiciendis. Voluptatum, voluptatibus earum. Ullam.` },
+      name: 'Chat App', image: chatImg , githublink: 'https://github.com/nikhilsingh-hub/chatApp', tools: ['React', 'MongoDb', 'Nodejs', 'Socket.io'], description: `Developed a resilient web chat application using the MERN stack and Socket.io for real-time communication.`
+    },
     {
-      name: 'E-commerce Platform', tools: ['xrx', 'yui', 'iocv'], description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ab sequi aliquam totam, dolor numquam autem culpa, quod quisquam reiciendis quae quidem maiores ducimus minima officia aspernatur, maxime adipisci pariatur.
-      Ea, tempore dolor! Eligendi ab sunt saepe unde pariatur excepturi placeat quaerat quas ea. Aspernatur, incidunt animi illo quo consectetur in. Blanditiis nemo nihil a libero, vel reprehenderit alias modi?
-      Corporis, adipisci! Quaerat praesentium exercitationem ut natus, aliquam assumenda illo alias! Magni, eaque, nesciunt repellendus illum et facere iste dicta amet perspiciatis expedita tempore ducimus reiciendis. Voluptatum, voluptatibus earum. Ullam.` },
+      name: 'Food Delivery App', image: chatImg, githublink: 'https://github.com/nikhilsingh-hub/Food-Delivery-App', tools: ['MERN', 'Payment Gateway'], description: `Created a food delivery app with user authentication, state management using Redux Toolkit, and an integrated payment gateway` },
     {
-      name: 'Social Media App', tools: ['xrx', 'yui', 'iocv'], description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ab sequi aliquam totam, dolor numquam autem culpa, quod quisquam reiciendis quae quidem maiores ducimus minima officia aspernatur, maxime adipisci pariatur.
-      Ea, tempore dolor! Eligendi ab sunt saepe unde pariatur excepturi placeat quaerat quas ea. Aspernatur, incidunt animi illo quo consectetur in. Blanditiis nemo nihil a libero, vel reprehenderit alias modi?
-      Corporis, adipisci! Quaerat praesentium exercitationem ut natus, aliquam assumenda illo alias! Magni, eaque, nesciunt repellendus illum et facere iste dicta amet perspiciatis expedita tempore ducimus reiciendis. Voluptatum, voluptatibus earum. Ullam.` },
+      name: 'Employee Track App', image: chatImg, githublink: 'https://github.com/nikhilsingh-hub/Spring_boot_MVN_Project', tools: ['Spring Boot', 'Java', 'ThymeLeaf', 'Docker'], description: ` Built a Spring Boot MVC web app with Thyme leaf for employee record management, and containerized it using Docker for deployment` },
   ];
 
 
   return (
-    <div className='flex flex-col gap-16'>
-      <div className='sticky top-20 flex p-2'>
+    <div className='flex flex-col gap-20'>
+      <div className='sticky top-16 flex p-2'>
         <h1 className='tab-title'>
           Projects
         </h1>
