@@ -32,7 +32,7 @@ function About({ aboutData }) {
 
     // style={{ backgroundImage: `url(${matriximg})` }}
     return (
-        <div className='h-screen p-10 font-playpen overflow-x-hidden'>
+        <div id="about" className='h-screen p-10 font-playpen overflow-x-hidden'>
             <div className="flex flex-col md:flex-row justify-between p-10 text-green-300">
                 <div className='md:w-1/2 p-10 flex flex-col justify-between'>
                     <div className="intro p-2 mb-10 h-80 relative">

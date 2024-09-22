@@ -17,7 +17,7 @@ function Projects() {
 
 
   return (
-    <div className='flex flex-col gap-20'>
+    <div id='projects' className='flex flex-col gap-20'>
       <div className='sticky top-16 flex p-2'>
         <h1 className='tab-title'>
           Projects
