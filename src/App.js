@@ -41,9 +41,9 @@ function App() {
   let about = {
     Name: "Nikhil Singh",
     Experience: calWorkEx(),
-    Education: 'NIT Uttarakhand',
+    Recent_Education: 'Btech, ECE',
+    College: 'NIT Uttarakhand',
     Current_Designation: 'Fullstack Developer',
-    Hobbies: 'Reading books, Playing Sports, Upskilling',
   }
 
   return (

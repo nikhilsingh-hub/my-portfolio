@@ -1,33 +1,56 @@
 import React, { useCallback, useState } from 'react'
 import emailjs from 'emailjs-com';
 import email from '../assets/email@.svg'
+import { useForm } from "react-hook-form"
 import addressIcon from '../assets/addressIcon.svg'
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact({ siteLinks, myEmailId, myAddress }) {
-    const [userInfo, setUserInfo] = useState({
-        name: '',
-        email: '',
-        body: ''
-    })
+    const [isFocused, setIsFocused] = useState({ namefield: false, emailfield: false, messagefield: false })
 
-    const sendEmailFunction = useCallback((e) => {
-        e.preventDefault()
-        // console.log(userInfo);
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-            from_name: userInfo.name,
-            from_email: userInfo.email,
-            message: userInfo.body,
-        }, 'YOUR_USER_ID')
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Email sent successfully!');
-        })
-        .catch((err) => {
-            console.error('FAILED...', err);
-            alert('Failed to send email.');
-        });
+    const handleFocus = (field) => {
+        setIsFocused((prev) => ({
+            ...prev,
+            [field]: true
+        }));
+    };
 
-    }, [userInfo])
+    const handleBlur = (field) => {
+        setIsFocused((prev) => ({
+            ...prev,
+            [field]: false
+        }));
+    };
+
+    const { register, handleSubmit, formState: { errors }, reset, } = useForm();
+
+    const sendEmailFunction = useCallback((data) => {
+
+        const templateParams = {
+            to_name: 'Nikhil',
+            from_name: data.name,
+            contact_info: data.email,
+            message: data.body,
+        };
+
+        emailjs.send(
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID,
+            templateParams,
+            process.env.REACT_APP_PUBLIC_KEY,
+        )
+            .then((result) => {
+                toast('Email successfully sent!', result.text);
+            })
+            .catch((error) => {
+                toast('Failed to send email.', error);
+            })
+            .finally(() => {
+                reset()
+            });
+
+    }, [])
 
 
     return (
@@ -38,42 +61,66 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                 </h2>
             </div>
             <div className='flex p-10 justify-between'>
-                <div className= 'border-2 border-orange-400 rounded-lg w-[50%] flex flex-col gap-6 p-10'>
-                    <div>
-                        <p className='text-white'>If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
+                <div className='border-2 border-orange-400 rounded-lg w-[50%] flex flex-col gap-6 p-10'>
+                    <div className=''>
+                        <p className='text-orange-400 font-bold font-playpen'>Dont hesitate, feel free to reach me.</p>
                     </div>
                     <div className=''>
-                        <form onSubmit={sendEmailFunction} className='flex flex-col gap-5'>
+                        <form onSubmit={handleSubmit(sendEmailFunction)} className='flex flex-col gap-5'>
+                            {/* Name field */}
                             <div className='flex flex-col gap-4'>
                                 <label htmlFor='namefield' className='text-white font-bold'>
                                     Your Name:
                                 </label>
-                                <input id='namefield' type="text" className='rounded-lg p-2'
-                                    onChange={(e) => setUserInfo({ ...userInfo, name: e.target.value })}
-                                    required />
+                                <input
+                                    id='namefield'
+                                    type='text'
+                                    onFocus={() => handleFocus('namefield')}
+                                    onBlur={() => handleBlur('namefield')}
+                                    className={`rounded-lg p-2 ${errors.name ? 'border-red-500' : ''} ${isFocused.namefield ? 'border-2 border-orange-400' : ''}`}
+                                    {...register('name', { required: 'Name is required' })}
+                                />
+                                {errors.name && <span className='text-red-500'>{errors.name.message}</span>}
                             </div>
 
+                            {/* Conatct Info field */}
                             <div className='flex flex-col gap-4'>
                                 <label htmlFor='emailfield' className='text-white font-bold'>
                                     Your Email:
                                 </label>
-                                <input id='emailfield' type="text" className='rounded-lg p-2'
-                                    onChange={(e) => setUserInfo({ ...userInfo, email: e.target.value })}
-                                    required />
+                                <input
+                                    id='emailfield'
+                                    type='text'
+                                    className={`rounded-lg p-2 ${errors.email ? 'border-red-500' : ''}`}
+                                    {...register('email', {
+                                        required: 'Email is required',
+                                        pattern: {
+                                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                            message: 'Invalid email address',
+                                        },
+                                    })}
+                                />
+                                {errors.email && <span className='text-red-500'>{errors.email.message}</span>}
                             </div>
 
                             <div className='flex flex-col gap-4'>
                                 <label htmlFor='bodyfield' className='text-white font-bold'>
-                                    Email Body:
+                                    Message:
                                 </label>
-                                <input id='bodyfield' type="text" className='rounded-lg p-2'
-                                    onChange={(e) => setUserInfo({ ...userInfo, body: e.target.value })}
-                                    required />
+                                <textarea
+                                    id='bodyfield'
+                                    className={`rounded-lg p-2 ${errors.body ? 'border-red-500' : ''}`}
+                                    {...register('body', { required: 'Write some message, common' })}
+                                />
+                                {errors.body && <span className='text-red-500'>{errors.body.message}</span>}
                             </div>
 
                             <div className=''>
-                                <button type='submit' className='p-2 bg-orange-400 font-extrabold rounded-lg text-white float-right hover:scale-110 transition-all'>
-                                    <span className=''>Send Email</span>
+                                <button
+                                    type='submit'
+                                    className='p-2 bg-orange-400 font-extrabold rounded-lg text-white float-right hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
+                                >
+                                    Send Message
                                 </button>
                             </div>
                         </form>
@@ -109,6 +156,19 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                     </div>
                 </div>
             </div>
+            <ToastContainer
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                transition={Bounce}
+            />
         </section>
     )
 }

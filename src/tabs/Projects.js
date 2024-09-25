@@ -3,8 +3,6 @@ import ProjectCard from '../components/ProjectCard.js'
 import chatImg from '../assets/Chat.png'
 
 function Projects() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const projects = [
     {
       name: 'Chat App', image: chatImg , githublink: 'https://github.com/nikhilsingh-hub/chatApp', tools: ['React', 'MongoDb', 'Nodejs', 'Socket.io'], description: `Developed a resilient web chat application using the MERN stack and Socket.io for real-time communication.`
