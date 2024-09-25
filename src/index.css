@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   scroll-behavior: smooth; */
-  background: linear-gradient(135deg, #223b64, #302b63, #24243e);
+  background: #0D0D0D;
   
 
   /* cursor: url('./assets/custom_cursor.png'),auto; */
@@ -69,8 +69,11 @@ code {
 
 .tab-title {
   display: block;
-  background-color: #ff00aa;
+  --tw-text-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-text-opacity));
   color: white;
+  font-weight: 700;
+  font-family: "Playpen Sans", sans-serif;
   padding: 10px 20px;
   border-radius: 8px;
   position: relative;
@@ -83,7 +86,8 @@ code {
   top: 50%;
   width: 32vw;
   height: 2px;
-  background-color: #ff00aa;
+  --tw-text-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-text-opacity));
 }
 
 .tab-title::before {
@@ -121,3 +125,8 @@ code {
   opacity: 1;
 }
 
+.active {
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
+  text-decoration: underline; /* Add underline or any other styles */
+}

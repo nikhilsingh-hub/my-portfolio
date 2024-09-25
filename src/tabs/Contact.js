@@ -31,14 +31,14 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
 
     return (
-        <div id="contactme" className='flex flex-col gap-4 overflow-x-hidden'>
+        <section id="contactme" className='flex flex-col gap-4 overflow-x-hidden bg-[#1A1A1A]'>
             <div className='flex justify-end pr-2'>
                 <h2 className="tab-title">
                     Contact
                 </h2>
             </div>
             <div className='flex p-10 justify-between'>
-                <div className= 'border-2 border-violet-400 rounded-lg w-[50%] flex flex-col gap-6 p-10'>
+                <div className= 'border-2 border-orange-400 rounded-lg w-[50%] flex flex-col gap-6 p-10'>
                     <div>
                         <p className='text-white'>If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
                     </div>
@@ -72,7 +72,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                             </div>
 
                             <div className=''>
-                                <button type='submit' className='p-2 bg-violet-400 font-extrabold rounded-lg text-white float-right hover:scale-110 transition-all'>
+                                <button type='submit' className='p-2 bg-orange-400 font-extrabold rounded-lg text-white float-right hover:scale-110 transition-all'>
                                     <span className=''>Send Email</span>
                                 </button>
                             </div>
@@ -101,7 +101,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                     <div className='flex justify-start items-center'>
                         <div className="flex items-center justify-between w-1/2 rounded-full transition-all duration-300 ease-in-out">
                             {siteLinks.map(element => (
-                                <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-4 bg-[rgb(135,59,191)] bg-opacity-90 rounded-full'>
+                                <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-4 bg-orange-400 bg-opacity-90 rounded-full'>
                                     <img src={element.icon} alt={element.alt} className='h-6 w-6 transition-transform duration-500 hover:scale-150 hover:rotate-12 bg' />
                                 </a>
                             ))}
@@ -109,7 +109,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -22,7 +22,7 @@ function Experience() {
         ]
     }]
     return (
-        <div id='experience' className='flex flex-col gap-12 mb-12 overflow-x-hidden'>
+        <section id='experience' className='flex flex-col gap-12 p-2 overflow-x-hidden bg-[#1A1A1A]'>
             <div className='flex justify-end pr-2'>
                 <h2 className="tab-title">
                     Experience
@@ -37,7 +37,7 @@ function Experience() {
 
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -15,12 +15,12 @@ function ExperienceCard({expInfo}) {
   return (
     <div
       ref={cardRef}
-      className='border-2 border-gray-800 h-fit w-full flex flex-col items-center pt-6 pl-6 pr-6 bg-gradient-to-br from-gray-900 to-black rounded-lg shadow-lg'
+      className='border-2 border-orange-400 h-fit w-full flex flex-col items-center pt-6 pl-6 pr-6 bg-gradient-to-br from-gray-900 to-black rounded-lg shadow-lg'
     >
       <div className={`experiencecard ${isVisible?'visible':''}`}
       >
         {/* Company Name */}
-        <div className='border-b-2 border-[#873BBF] pb-4 mb-4'>
+        <div className='border-b-2 border-orange-400 pb-4 mb-4'>
           <a
             href=''
             className='flex items-center gap-4'
@@ -29,10 +29,10 @@ function ExperienceCard({expInfo}) {
           >
             <img
               src={expInfo.CompanyIcon}
-              className='w-10 h-10 object-cover rounded-lg border-2 border-[#873BBF] shadow-md'
+              className='w-10 h-10 object-cover rounded-lg border-2 border-orange-400 shadow-md p-2'
               alt='Logo'
             />
-            <span className='text-[#873BBF] text-2xl font-extrabold uppercase'>
+            <span className='text-orange-400 text-2xl font-extrabold uppercase'>
               {expInfo.CompanyName}
             </span>
           </a>
@@ -49,7 +49,7 @@ function ExperienceCard({expInfo}) {
         </div>
         {/* Tech Stacks */}
         <div className={`text-white tech-details ${isDetailsVisible?'visible':''}`}>
-          <h3 className='text-xl text-[#873BBF] font-bold mb-2'>Tech Stacks:</h3>
+          <h3 className='text-xl text-[#F0A500] font-bold mb-2'>Tech Stacks:</h3>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             {expInfo.tech_stacks.map((element, index) => {
                 return (

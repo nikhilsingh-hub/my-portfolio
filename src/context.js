@@ -28,8 +28,9 @@ import About from './tabs/About.js';
 import Skills from './tabs/Skills.js';
 import Projects from './tabs/Projects.js';
 import Contact from './tabs/Contact.js'
-// import Experience from './tabs/Experience.js';
+import Experience from './tabs/Experience.js';
+import Footer from './components/Footer.js'
 
 export {nodejs, reactsvg, javascript, cplus, mongodb, mysql, nextjs, css, systemdesign, docker, php, html};
 export {leetcode, linkedin, github, insta};
-export {Header, About, Skills, Projects, Contact};
+export {Header, About, Skills, Projects, Contact, Experience, Footer};

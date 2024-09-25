@@ -17,21 +17,21 @@ function Projects() {
 
 
   return (
-    <div id='projects' className='flex flex-col gap-20'>
+    <section id='projects' className='flex flex-col gap-20 bg-[#242424]'>
       <div className='sticky top-16 flex p-2'>
         <h1 className='tab-title'>
           Projects
         </h1>
       </div>
-      <div className='flex flex-col items-center gap-4'>
+      <div className='flex flex-col items-center gap-4 mb-4'>
         {
           projects.map((element, index) =>
-            <ProjectCard project={element} index={index} />
+            <ProjectCard key={index} project={element} index={index} />
           )
         }
       </div>
 
-    </div>
+    </section>
 
   );
 };

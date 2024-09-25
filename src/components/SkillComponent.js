@@ -7,7 +7,7 @@ function SkillComponent({ skillName, proficiency, icon }) {
 
   return (
     <div className='flex flex-col justify-center items-center transition duration-500 hover:scale-125'>
-      <div className='relative h-40 w-40 flex justify-center items-center rounded-full hover:border-2 hover:border-pink-500'>
+      <div className='relative h-40 w-40 flex justify-center items-center rounded-full hover:border-2 hover:border-orange-500'>
         {/* Outer Circle with Progress Bar */}
         <svg className='absolute' height="160" width="160">
           <circle
@@ -23,7 +23,7 @@ function SkillComponent({ skillName, proficiency, icon }) {
             cx="80"
             cy="80"
             r={radius}
-            stroke="blue"
+            stroke="orange"
             strokeWidth="10"
             fill="transparent"
             strokeDasharray={circumference}
@@ -38,7 +38,7 @@ function SkillComponent({ skillName, proficiency, icon }) {
         </svg>
 
         {/* Inner Circle with Skill Icon */}
-        <div className=' h-28 w-28 rounded-full flex justify-center items-center bg-black z-10'>
+        <div className='h-28 w-28 rounded-full flex justify-center items-center bg-black z-10'>
           <img src={icon} alt={skillName} className='h-20 w-20 rounded-full skill-icon' />
         </div>
       </div>

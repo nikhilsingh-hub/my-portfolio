@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { leetcode, linkedin, github, insta, Header, About, Skills, Projects, Contact } from './context.js'
+import { leetcode, linkedin, github, insta, Header, About, Skills, Projects, Contact, Experience, Footer } from './context.js'
 import AnimatedCursor from "react-animated-cursor"
-import Experience from './tabs/Experience.js'
+// import Experience from './tabs/Experience.js'
 import { Element } from 'react-scroll';
 
 
@@ -100,6 +100,9 @@ function App() {
 
       <Element name="contactme">
         <Contact siteLinks={siteLinks} myEmailId={myEmailId} myAddress={myAddress} />
+      </Element>
+      <Element>
+        <Footer/>
       </Element>
     </>
   );

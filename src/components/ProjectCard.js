@@ -9,8 +9,8 @@ function ProjectCard({ project, index }) {
   const heightToStick = [7, 11, 15]
 
   return (
-    <div ref={cardRef} className={`w-[45%] border-2 border-black rounded-lg sticky overflow-hidden shadow-lg bg-[#161335]  text-white`} style={{ top: `${heightToStick[index]}rem` }}>
-      <div className='flex items-center justify-between border-b-2 border-[#873BBF] p-4 text-[#873BBF]'>
+    <div ref={cardRef} className={`w-[45%] border-2 border-black rounded-lg sticky overflow-hidden shadow-lg bg-gradient-to-br from-gray-900 to-black  text-white`} style={{ top: `${heightToStick[index]}rem` }}>
+      <div className='flex items-center justify-between border-b-2 border-orange-400 p-4 text-orange-400'>
         <a href={githublink} target='_blank' rel='noopener noreferrer'>
           <img src={github} className='h-5 w-5 hover:scale-125 hover:rotate-45 transition-all duration-300 ease-in-out' alt="GitHub Link" />
         </a>
@@ -24,10 +24,10 @@ function ProjectCard({ project, index }) {
       <div className={`p-4`}>
         {/* Tools Used */}
         <div className="mb-3">
-          <h3 className={`text-lg text-[#3B82F6] font-semibold animate-text-from-left ${isOnScreen ? 'visible' : ''}`}>Technologies Used:</h3>
+          <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left ${isOnScreen ? 'visible' : ''}`}>Technologies Used:</h3>
           <ul className={`flex flex-wrap gap-2 mt-2 animate-text-from-right ${isOnScreen ? 'visible' : ''}`}>
             {tools.map((tool, index) => (
-              <li key={index} className='bg-[#873BBF] text-white rounded-full px-2 py-1 text-sm'>
+              <li key={index} className='bg-orange-400 text-white rounded-full px-2 py-1 text-sm'>
                 {tool}
               </li>
             ))}
@@ -36,7 +36,7 @@ function ProjectCard({ project, index }) {
 
         {/* Project Description */}
         <div>
-          <h3 className={`text-lg text-[#3B82F6] font-semibold animate-text-from-left ${isOnScreen ? 'visible' : ''}`}>Description:</h3>
+          <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left ${isOnScreen ? 'visible' : ''}`}>Description:</h3>
           <p className={` mb-4 animate-text-from-right ${isOnScreen ? 'visible' : ''}`}>
             {description}
           </p>

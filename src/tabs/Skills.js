@@ -20,14 +20,14 @@ const Skills = forwardRef(() => {
   };
 
   return (
-    <div id="skills" className="border-t-2 border-[#302b63] pt-10 pb-10 overflow-x-hidden">
+    <section id="skills" className="pt-10 pb-10 overflow-x-hidden bg-[#212121]">
       <div className="flex flex-col items-center justify-center gap-4 h-fit">
         <h2 className="tab-title">
           SKILLS
         </h2>
 
 
-        <div className="overflow-hidden w-[90%] h-fit pt-16 pb-16 bg-[#161335] flex items-center">
+        <div className="overflow-hidden w-[90%] h-fit pt-16 pb-16 bg-[#0D0D0D] rounded-lg flex items-center">
           <div className={`flex space-x-10 w-fit animate-scroll`}>
             {Object.keys(skills).map((skill) => (
               <SkillComponent
@@ -49,7 +49,7 @@ const Skills = forwardRef(() => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 })
 

@@ -36,7 +36,7 @@
   }
   
   .skill-icon {
-    filter: drop-shadow(0 0 10px #00ff00);
+    filter: drop-shadow(0 0 10px rgb(251 146 60));
   }
   
   .skill-name {
