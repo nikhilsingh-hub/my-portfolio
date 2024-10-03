@@ -54,26 +54,21 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
 
     return (
-        <section id="contactme" className='flex flex-col gap-4 rounded-lg p-10 mx-14 my-32 overflow-x-hidden bg-[#1A1A1A]'>
+        <section id="contactme" className='flex flex-col gap-4 rounded-lg p-5 md:p-10 mx-4 md:mx-14 my-16 md:my-32 overflow-x-hidden bg-[#1A1A1A]'>
             <div className='flex justify-end items-center gap-4 pr-2'>
-            <div className='line'>
+                <div className='line'></div>
+                <h2 className="tab-title">Contact</h2>
             </div>
-                <h2 className="tab-title">
-                    Contact
-                </h2>
-            </div>
-            <div className='flex p-10 justify-between'>
-                <div className='border-2 border-orange-400 rounded-lg w-[50%] flex flex-col gap-6 p-10'>
-                    <div className=''>
-                        <p className='text-orange-400 font-bold font-playpen'>Dont hesitate, feel free to reach me.</p>
+            <div className='flex flex-col md:flex-row justify-between'>
+                <div className='border-2 border-orange-400 rounded-lg w-full md:w-[50%] flex flex-col gap-6 p-5 md:p-10'>
+                    <div>
+                        <p className='text-orange-400 font-bold font-playpen'>Don't hesitate, feel free to reach me.</p>
                     </div>
-                    <div className=''>
+                    <div>
                         <form onSubmit={handleSubmit(sendEmailFunction)} className='flex flex-col gap-5'>
                             {/* Name field */}
                             <div className='flex flex-col gap-4'>
-                                <label htmlFor='namefield' className='text-white font-bold'>
-                                    Your Name:
-                                </label>
+                                <label htmlFor='namefield' className='text-white font-bold'>Your Name:</label>
                                 <input
                                     id='namefield'
                                     type='text'
@@ -85,11 +80,9 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                                 {errors.name && <span className='text-red-500'>{errors.name.message}</span>}
                             </div>
 
-                            {/* Conatct Info field */}
+                            {/* Email field */}
                             <div className='flex flex-col gap-4'>
-                                <label htmlFor='emailfield' className='text-white font-bold'>
-                                    Your Email:
-                                </label>
+                                <label htmlFor='emailfield' className='text-white font-bold'>Your Email:</label>
                                 <input
                                     id='emailfield'
                                     type='text'
@@ -105,10 +98,9 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                                 {errors.email && <span className='text-red-500'>{errors.email.message}</span>}
                             </div>
 
+                            {/* Message field */}
                             <div className='flex flex-col gap-4'>
-                                <label htmlFor='bodyfield' className='text-white font-bold'>
-                                    Message:
-                                </label>
+                                <label htmlFor='bodyfield' className='text-white font-bold'>Message:</label>
                                 <textarea
                                     id='bodyfield'
                                     className={`rounded-lg p-2 ${errors.body ? 'border-red-500' : ''}`}
@@ -117,7 +109,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                                 {errors.body && <span className='text-red-500'>{errors.body.message}</span>}
                             </div>
 
-                            <div className=''>
+                            <div>
                                 <button
                                     type='submit'
                                     className='p-2 bg-orange-400 font-extrabold rounded-lg text-white float-right hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
@@ -128,30 +120,27 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                         </form>
                     </div>
                 </div>
-                <div className='w-[50%] p-10 flex flex-col gap-8 justify-center'>
+
+                <div className='w-full md:w-[50%] p-5 md:p-10 flex flex-col gap-8 justify-center'>
                     <div className='flex gap-2 text-white font-bold font-playpen text-xl'>
                         <div className='p-2 bg-slate-500 rounded-full'>
                             <img src={email} alt="@" className='h-8 w-8' />
                         </div>
-                        <div className='flex justify-center items-center'>
-                            {myEmailId}
-                        </div>
+                        <div className='flex justify-center items-center'>{myEmailId}</div>
                     </div>
 
                     <div className='flex gap-2 text-white font-bold font-playpen text-xl'>
                         <div className='p-2 bg-slate-500 rounded-full'>
-                            <img src={addressIcon} alt="@" className='h-8 w-8' />
+                            <img src={addressIcon} alt="Address" className='h-8 w-8' />
                         </div>
-                        <div className='flex justify-center items-center'>
-                            {myAddress}
-                        </div>
+                        <div className='flex justify-center items-center'>{myAddress}</div>
                     </div>
 
                     <div className='flex justify-start items-center'>
-                        <div className="flex items-center justify-between w-1/2 rounded-full transition-all duration-300 ease-in-out">
+                        <div className="flex items-center justify-between w-full md:w-1/2 rounded-full transition-all duration-300 ease-in-out">
                             {siteLinks.map(element => (
                                 <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-4 bg-orange-400 bg-opacity-90 rounded-full'>
-                                    <img src={element.icon} alt={element.alt} className='h-6 w-6 transition-transform duration-500 hover:scale-150 hover:rotate-12 bg' />
+                                    <img src={element.icon} alt={element.alt} className='h-6 w-6 transition-transform duration-500 hover:scale-150 hover:rotate-12' />
                                 </a>
                             ))}
                         </div>
@@ -172,6 +161,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                 transition={Bounce}
             />
         </section>
+
     )
 }
 

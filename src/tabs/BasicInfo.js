@@ -34,48 +34,47 @@ function BasicInfo({ aboutData }) {
     }, [])
 
     return (
-        <section ref={basicInfoRef} className='rounded-lg mx-14 my-14 font-playpen overflow-x-hidden bg-[#1A1A1A]'>
-            <div className="flex flex-col md:flex-row justify-between p-10">
-                <div className='md:w-1/2 p-5'>
-                    <div className={` flex flex-col`}>
-                        <div className="intro p-2 mb-10 h-80">
+        <section ref={basicInfoRef} className='rounded-lg mx-4 sm:mx-6 md:mx-14 my-14 font-playpen overflow-x-hidden bg-[#1A1A1A]'>
+            <div className="flex flex-col lg:flex-row justify-between p-5 md:p-10">
+                <div className='lg:w-1/2 p-5'>
+                    <div className="flex flex-col">
+                        <div className="intro p-2 mb-10 h-auto lg:h-80">
                             <h3 className="p-2 relative">
                                 <div className="mb-4">
-                                    <span className="text-white font-extrabold text-3xl">Hello,<br /> This is</span>
-                                    <span className="text-orange-400 font-extrabold text-5xl"> {aboutData.Name}</span>
+                                    <span className="text-white font-extrabold text-2xl md:text-3xl">Hello,<br /> This is</span>
+                                    <span className="text-orange-400 font-extrabold text-4xl md:text-5xl"> {aboutData.Name}</span>
                                 </div>
-                                {
-                                    intro.map((ele, index) => {
-                                        let objectKey = Object.keys(ele)[0]
-                                        return <div className="mb-4" key={index}>
-                                            <span className="text-white text-2xl font-sniglet">{objectKey.replace('_', ' ')}:</span>
-                                            <span className="text-orange-400 text-2xl font-sniglet"> {ele[objectKey]}</span>
+                                {intro.map((ele, index) => {
+                                    let objectKey = Object.keys(ele)[0];
+                                    return (
+                                        <div className="mb-4" key={index}>
+                                            <span className="text-white text-lg md:text-2xl font-sniglet">{objectKey.replace('_', ' ')}:</span>
+                                            <span className="text-orange-400 text-lg md:text-2xl font-sniglet"> {ele[objectKey]}</span>
                                         </div>
-                                    })
-                                }
+                                    );
+                                })}
                             </h3>
                         </div>
                         <div className='w-fit pl-2 items-center'>
                             <a href='https://drive.google.com/file/d/1ozJP53JsYn8f32V-oGSF8GxVB7Ly9pRL/view?usp=sharing'
-                                className='bg-orange-400 p-3 rounded-full flex gap-2 items-center font-comic text-xl text-white font-bold hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
+                                className='bg-orange-400 p-2 md:p-3 rounded-full flex gap-2 items-center font-comic text-lg md:text-xl text-white font-bold hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
                                 target="_blank" rel='noreferrer'>
                                 Resume
-                                <img src={download} alt="" className='h-6 w-6' />
+                                <img src={download} alt="" className='h-5 w-5 md:h-6 md:w-6' />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div className='flex items-center'>
-                    {/* <div className={`popupanimation ${isVisible ? 'play' : ''}`}> */}
+                <div className='flex items-center mt-8 lg:mt-0'>
                     <img
                         src={PaintingBoy}
                         alt="PaintingBoy"
-                        className='w-[35vw]'
+                        className='w-full md:w-[45vw] lg:w-[35vw]'
                     />
-                    {/* </div> */}
                 </div>
             </div>
         </section>
+
 
     )
 }

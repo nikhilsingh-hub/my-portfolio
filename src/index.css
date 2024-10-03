@@ -76,6 +76,7 @@ code {
 
 .line{
   height: 2px;
+  display: block;
   background-color: rgb(251 146 60);
   width: 33vw;
 }
