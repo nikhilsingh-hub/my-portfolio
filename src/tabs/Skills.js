@@ -20,11 +20,16 @@ const Skills = forwardRef(() => {
   };
 
   return (
-    <section id="skills" className="pt-10 pb-10 overflow-x-hidden bg-[#212121]">
+    <section id="skills" className="p-10 overflow-x-hidden bg-[#212121] rounded-lg  mx-14 my-10 z-10">
       <div className="flex flex-col items-center justify-center gap-4 h-fit">
-        <h2 className="tab-title">
-          SKILLS
-        </h2>
+        <div className='flex items-center gap-4'>
+          <div className='line'></div>
+          <h2 className="tab-title">
+            SKILLS
+          </h2>
+          <div className='line'></div>
+        </div>
+
 
 
         <div className="overflow-hidden w-[90%] h-fit pt-16 pb-16 bg-[#0D0D0D] rounded-lg flex items-center">

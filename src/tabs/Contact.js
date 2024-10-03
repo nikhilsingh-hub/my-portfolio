@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react'
 import emailjs from 'emailjs-com';
-import email from '../assets/email@.svg'
+import email from '../assets/svg/email@.svg'
 import { useForm } from "react-hook-form"
-import addressIcon from '../assets/addressIcon.svg'
+import addressIcon from '../assets/svg/addressIcon.svg'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -54,8 +54,10 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
 
     return (
-        <section id="contactme" className='flex flex-col gap-4 overflow-x-hidden bg-[#1A1A1A]'>
-            <div className='flex justify-end pr-2'>
+        <section id="contactme" className='flex flex-col gap-4 rounded-lg p-10 mx-14 my-32 overflow-x-hidden bg-[#1A1A1A]'>
+            <div className='flex justify-end items-center gap-4 pr-2'>
+            <div className='line'>
+            </div>
                 <h2 className="tab-title">
                     Contact
                 </h2>

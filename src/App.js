@@ -1,15 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { leetcode, linkedin, github, insta, Header, About, Skills, Projects, Contact, Experience, Footer } from './context.js'
+import { leetcode, linkedin, github, insta, Header, BasicInfo, Skills, About, Projects, Contact, Experience, Footer } from './context.js'
 import AnimatedCursor from "react-animated-cursor"
-// import Experience from './tabs/Experience.js'
-import { Element } from 'react-scroll';
+import about from './data/aboutData.js'
+import {myEmailId, myAddress} from './data/contactData.js'
 
 
 function App() {
-
-  const myEmailId = 'nikhilsingh35911298@gmail.com'
-  const myAddress = 'Noida, UttarPradesh, 844101'
-
 
   const siteLinks = [
     { link: 'https://github.com/nikhilsingh-hub', icon: github, alt: 'github' },
@@ -17,34 +13,7 @@ function App() {
     { link: 'instagram.com', icon: insta, alt: 'instagram' },
     { link: 'https://leetcode.com/u/niikhil12/', icon: leetcode, alt: 'leetcode' }]
 
-  const calWorkEx = useCallback(() => {
-    let joiningDate = new Date(2023, 4, 22); // 22 may, 2023
-    let currentDate = new Date()
 
-    let yearDiff = currentDate.getFullYear() - joiningDate.getFullYear()
-    let monthDiff = currentDate.getMonth() - joiningDate.getMonth()
-    let dateDiff = currentDate.getDate() - joiningDate.getDate()
-
-    if (dateDiff < 0) {
-      monthDiff -= 1;
-      dateDiff += new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
-    }
-
-    if (monthDiff < 0) {
-      yearDiff -= 1;
-      monthDiff += 12;
-    }
-
-    return `${yearDiff} year(s) ${monthDiff} month(s) ${dateDiff} day(s)`;
-  }, [])
-
-  let about = {
-    Name: "Nikhil Singh",
-    Experience: calWorkEx(),
-    Recent_Education: 'Btech, ECE',
-    College: 'NIT Uttarakhand',
-    Current_Designation: 'Fullstack Developer',
-  }
 
   return (
     <>
@@ -82,28 +51,13 @@ function App() {
         ]}
       />
       <Header siteLinks={siteLinks} />
-      <Element name="about">
-        <About aboutData={about} />
-      </Element>
-
-      <Element name="skills">
-        <Skills />
-      </Element>
-
-      <Element name="experience">
-        <Experience />
-      </Element>
-
-      <Element name="projects">
-        <Projects />
-      </Element>
-
-      <Element name="contactme">
-        <Contact siteLinks={siteLinks} myEmailId={myEmailId} myAddress={myAddress} />
-      </Element>
-      <Element>
-        <Footer/>
-      </Element>
+      <BasicInfo aboutData={about} />
+      <About aboutData={about} />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact siteLinks={siteLinks} myEmailId={myEmailId} myAddress={myAddress} />
+      <Footer />
     </>
   );
 }

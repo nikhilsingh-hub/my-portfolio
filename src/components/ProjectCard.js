@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import github from '../assets/github.svg';
+import github from '../assets/svg/github.svg';
 import isElementVisible from '../hooks/isVisible.js';
 
 function ProjectCard({ project, index }) {

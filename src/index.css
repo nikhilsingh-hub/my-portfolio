@@ -22,7 +22,7 @@ body {
 
 
 .shadoweffect1{
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .scalebigger {
@@ -30,10 +30,6 @@ body {
   transition: transform 200ms ease-in-out; */
   background-color: antiquewhite;
 }
-
-
-
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -69,8 +65,7 @@ code {
 
 .tab-title {
   display: block;
-  --tw-text-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-text-opacity));
+  background-color: rgb(251 146 60);
   color: white;
   font-weight: 700;
   font-family: "Playpen Sans", sans-serif;
@@ -79,26 +74,24 @@ code {
   position: relative;
 }
 
-.tab-title::before,
-.tab-title::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 32vw;
+.line{
   height: 2px;
-  --tw-text-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-text-opacity));
+  background-color: rgb(251 146 60);
+  width: 33vw;
 }
 
-.tab-title::before {
-  left: -33vw;
+.popupanimation{
+  width: 100%;
+  height: 100%; 
+  transform: scale(0);
+  opacity: 0; 
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
-
-.tab-title::after {
-  right: -33vw;
-} 
-
-.experiencecard {
+.popupanimation.play {
+  transform: scale(1); 
+  opacity: 1; 
+}
+/* .experiencecard {
   width: 100%;
   height: 100%; 
   transform: scale(0);
@@ -109,7 +102,7 @@ code {
 .experiencecard.visible {
   transform: scale(1); 
   opacity: 1; 
-}
+} */
 
 .tech-details {
   height: 0;

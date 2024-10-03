@@ -1,77 +1,63 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import neo from '../assets/Me_typing.png'
-import download from '../assets/downlaod.svg'
+import React from "react";
+import { backendLogo, frontendLogo, uiLogo, ExercisingBoy } from '../context'
 
-function About({ aboutData }) {
-    const [intro, setIntro] = useState([{Experience:''}, {Recent_Education:''}, {College:''}, {Current_Designation:''}]);
+function About() {
 
-    const createTypingEffect = (myArray, i) => {
-        setTimeout(() => {
-            setIntro([...myArray])
-        }, i * 200)
-    }
+  return (
 
-    const addTextAnimation = useCallback(() => {
-        let tempArray = [{Experience:''}, {Recent_Education:''}, {College:''}, {Current_Designation:''}];
-        for (let i = 0; i < 50; i++) {
+    <section className="relative bg-[#212121] rounded-lg p-10  mx-14 my-32" id="about">
+      <div className='flex items-center gap-4 pr-2'>
 
-            tempArray = [{Experience: aboutData.Experience.substr(0, tempArray[0]['Experience'].length + 1)},
-            {Recent_Education:aboutData.Recent_Education.substr(0, tempArray[1]['Recent_Education'].length + 1)},
-            {College:aboutData.College.substr(0, tempArray[2]['College'].length + 1)},
-            {Current_Designation:aboutData.Current_Designation.substr(0, tempArray[3]['Current_Designation'].length + 1)}]
-
-            createTypingEffect(tempArray, i)
-        }
-    })
-
-
-
-    useEffect(() => {
-        addTextAnimation();
-    }, [])
-
-    return (
-        <section id="about" className='h-screen p-10 font-playpen overflow-x-hidden bg-[#1A1A1A]'>
-            <div className="flex flex-col md:flex-row justify-between p-10">
-                <div className='md:w-1/2 p-10 flex flex-col justify-between'>
-                    <div className="intro p-2 mb-10 h-80 relative">
-                        <h3 className="p-2 relative">
-                            <div className="mb-4">
-                                <span className="text-white font-extrabold text-3xl">Hello,<br /> This is</span>
-                                <span className="text-orange-400 font-extrabold text-5xl"> {aboutData.Name}</span>
-                            </div>
-                            {
-                                intro.map((ele, index) => {
-                                        let objectKey = Object.keys(ele)[0]
-                                        return <div className="mb-4" key={index}>
-                                            <span className="text-white text-2xl">{objectKey.replace('_',' ')}:</span>
-                                            <span className="text-orange-400 text-2xl"> { ele[objectKey]}</span>
-                                        </div>
-                                })
-                            }
-                        </h3>
-                    </div>
-                    <div className='w-fit pl-2 items-center'>
-                        <a href='https://drive.google.com/file/d/1ozJP53JsYn8f32V-oGSF8GxVB7Ly9pRL/view?usp=sharing'
-                            className='bg-orange-400 p-3 rounded-full flex gap-2 items-center font-comic text-xl text-white font-bold hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
-                            target="_blank" rel='noreferrer'>
-                            Resume
-                            <img src={download} alt="" className='h-6 w-6' />
-                        </a>
-                    </div>
-                </div>
-                <div className='flex items-center'>
-                    <img
-                        src={neo}
-                        alt="Neo"
-                        className='w-[40vw]'
-                    />
-                </div>
-
+        <h2 className="tab-title">
+          About
+        </h2>
+        <div className='line'></div>
+      </div>
+      <div className="flex flex-row items-center gap-8">
+        {/* <div> */}
+          {/* <div className="bg-[#0D0D0D] w-[25vw] h-[25vh] rounded-t-full shadoweffect1 relative"> */}
+            <img
+              src={ExercisingBoy}
+              alt="Me sitting with a laptop"
+              className="w-1/3"
+            />
+          {/* </div> */}
+        {/* </div> */}
+        <ul className="text-white flex flex-col gap-12 mt-5">
+          <li className="flex flex-row items-center rounded-xl list-none p-6 bg-gradient-to-r from-[#0D0D0D] to-transparent hover:bg-gradient-to-r hover:from-[#0D0D0D] hover:to-[#0D0D0D] transition-all duration-1000">
+            <img src={frontendLogo} alt="Cursor icon" className="w-12 h-12" />
+            <div className="ml-4">
+              <h3 className="text-2xl font-semibold text-orange-400">Frontend Developer</h3>
+              <p className="text-xl">
+                I'm a frontend developer with experience in building responsive
+                and optimized sites
+              </p>
             </div>
-        </section>
-
-    )
+          </li>
+          <li className="flex flex-row items-center rounded-xl list-none p-6 bg-gradient-to-r from-[#0D0D0D] to-transparent hover:bg-gradient-to-r hover:from-[#0D0D0D] hover:to-[#0D0D0D] transition-all duration-400">
+            <img src={backendLogo} alt="Server icon" className="w-12 h-12" />
+            <div className="ml-4">
+              <h3 className="text-2xl font-semibold text-orange-400">Backend Developer</h3>
+              <p className="text-xl">
+                I have experience developing fast and optimized back-end systems
+                and APIs
+              </p>
+            </div>
+          </li>
+          <li className="flex flex-row items-center rounded-xl list-none p-6 bg-gradient-to-r from-[#0D0D0D] to-transparent hover:bg-gradient-to-r hover:from-[#0D0D0D] hover:to-[#0D0D0D] transition-all duration-400">
+            <img src={uiLogo} alt="UI icon" className="w-12 h-12" />
+            <div className="ml-4">
+              <h3 className="text-2xl font-semibold text-orange-400">UI Designer</h3>
+              <p className="text-xl">
+                I have designed multiple landing pages and have created design
+                systems as well
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  );
 }
 
-export default About
+export default About;

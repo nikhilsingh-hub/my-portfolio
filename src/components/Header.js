@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Events, scrollSpy } from 'react-scroll';
-import { throttle } from 'lodash';
 
 function Header({ siteLinks }) {
   const [scrolled, setScrolled] = useState(false);

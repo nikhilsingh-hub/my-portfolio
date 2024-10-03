@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import IsVisible from '../hooks/isVisible';
-import dropdown from '../assets/dropdown.svg'
-import pullup from '../assets/pullup.svg'
+import dropdown from '../assets/svg/dropdown.svg'
+import pullup from '../assets/svg/pullup.svg'
 
 function ExperienceCard({expInfo}) {
   const cardRef = useRef(null);
@@ -17,7 +17,7 @@ function ExperienceCard({expInfo}) {
       ref={cardRef}
       className='border-2 border-orange-400 h-fit w-full flex flex-col items-center pt-6 pl-6 pr-6 bg-gradient-to-br from-gray-900 to-black rounded-lg shadow-lg'
     >
-      <div className={`experiencecard ${isVisible?'visible':''}`}
+      <div className={`popupanimation ${isVisible?'play':''}`}
       >
         {/* Company Name */}
         <div className='border-b-2 border-orange-400 pb-4 mb-4'>
