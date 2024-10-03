@@ -23,7 +23,7 @@ function ExperienceCard({expInfo}) {
         <div className='border-b-2 border-orange-400 pb-4 mb-4'>
           <a
             href=''
-            className='flex items-center gap-4'
+            className='flex items-center gap-4 font-playpen'
             target='_blank'
             rel='noreferrer'
           >
@@ -39,7 +39,7 @@ function ExperienceCard({expInfo}) {
         </div>
 
         {/* Date */}
-        <div className='flex justify-end font-playpen text-gray-400 text-sm italic mb-2'>
+        <div className='flex justify-end font-sniglet text-gray-400 text-sm italic mb-2'>
           MAY, 2023 - Present
         </div>
 
@@ -49,13 +49,13 @@ function ExperienceCard({expInfo}) {
         </div>
         {/* Tech Stacks */}
         <div className={`text-white tech-details ${isDetailsVisible?'visible':''}`}>
-          <h3 className='text-xl text-[#F0A500] font-bold mb-2'>Tech Stacks:</h3>
+          <h3 className='text-xl text-[#F0A500] font-playpen mb-2'>Tech Stacks:</h3>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             {expInfo.tech_stacks.map((element, index) => {
                 return (
                     <div key={index}>
-                    <span className='font-semibold'>{`${element.name}: `}</span>
-                    <p className='text-gray-400'>{element.stacks}</p>
+                    <span className='font-semibold font-akaya'>{`${element.name}: `}</span>
+                    <p className='text-gray-400 font-sniglet'>{element.stacks}</p>
                   </div>
                 )
             })}

@@ -14,7 +14,7 @@ function ProjectCard({ project, index }) {
         <a href={githublink} target='_blank' rel='noopener noreferrer'>
           <img src={github} className='h-5 w-5 hover:scale-125 hover:rotate-45 transition-all duration-300 ease-in-out' alt="GitHub Link" />
         </a>
-        <h2 className='flex-grow text-center font-bold text-xl'>{name}</h2>
+        <h2 className='flex-grow text-center font-bold text-xl font-playpen'>{name}</h2>
       </div>
 
       <div className='p-5 flex justify-center items-center'>
@@ -24,8 +24,8 @@ function ProjectCard({ project, index }) {
       <div className={`p-4`}>
         {/* Tools Used */}
         <div className="mb-3">
-          <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left ${isOnScreen ? 'visible' : ''}`}>Technologies Used:</h3>
-          <ul className={`flex flex-wrap gap-2 mt-2 animate-text-from-right ${isOnScreen ? 'visible' : ''}`}>
+          <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left font-akaya ${isOnScreen ? 'visible' : ''}`}>Technologies Used:</h3>
+          <ul className={`flex flex-wrap gap-2 mt-2 animate-text-from-right font-sniglet ${isOnScreen ? 'visible' : ''}`}>
             {tools.map((tool, index) => (
               <li key={index} className='bg-orange-400 text-white rounded-full px-2 py-1 text-sm'>
                 {tool}
@@ -36,8 +36,8 @@ function ProjectCard({ project, index }) {
 
         {/* Project Description */}
         <div>
-          <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left ${isOnScreen ? 'visible' : ''}`}>Description:</h3>
-          <p className={` mb-4 animate-text-from-right ${isOnScreen ? 'visible' : ''}`}>
+          <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left font-akaya ${isOnScreen ? 'visible' : ''}`}>Description:</h3>
+          <p className={` mb-4 animate-text-from-right font-sniglet ${isOnScreen ? 'visible' : ''}`}>
             {description}
           </p>
         </div>

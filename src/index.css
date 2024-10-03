@@ -91,18 +91,7 @@ code {
   transform: scale(1); 
   opacity: 1; 
 }
-/* .experiencecard {
-  width: 100%;
-  height: 100%; 
-  transform: scale(0);
-  opacity: 0; 
-  transition: transform 1s ease-out, opacity 1s ease-out; 
-}
 
-.experiencecard.visible {
-  transform: scale(1); 
-  opacity: 1; 
-} */
 
 .tech-details {
   height: 0;

@@ -48,8 +48,8 @@ function BasicInfo({ aboutData }) {
                                     intro.map((ele, index) => {
                                         let objectKey = Object.keys(ele)[0]
                                         return <div className="mb-4" key={index}>
-                                            <span className="text-white text-2xl">{objectKey.replace('_', ' ')}:</span>
-                                            <span className="text-orange-400 text-2xl"> {ele[objectKey]}</span>
+                                            <span className="text-white text-2xl font-sniglet">{objectKey.replace('_', ' ')}:</span>
+                                            <span className="text-orange-400 text-2xl font-sniglet"> {ele[objectKey]}</span>
                                         </div>
                                     })
                                 }

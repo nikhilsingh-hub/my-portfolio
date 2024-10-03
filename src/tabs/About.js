@@ -8,7 +8,7 @@ function About() {
     <section className="relative bg-[#212121] rounded-lg p-10  mx-14 my-32" id="about">
       <div className='flex items-center gap-4 pr-2'>
 
-        <h2 className="tab-title">
+        <h2 className="tab-title font-playpen">
           About
         </h2>
         <div className='line'></div>
@@ -27,8 +27,8 @@ function About() {
           <li className="flex flex-row items-center rounded-xl list-none p-6 bg-gradient-to-r from-[#0D0D0D] to-transparent hover:bg-gradient-to-r hover:from-[#0D0D0D] hover:to-[#0D0D0D] transition-all duration-1000">
             <img src={frontendLogo} alt="Cursor icon" className="w-12 h-12" />
             <div className="ml-4">
-              <h3 className="text-2xl font-semibold text-orange-400">Frontend Developer</h3>
-              <p className="text-xl">
+              <h3 className="text-2xl font-semibold text-orange-400 font-playpen">Frontend Developer</h3>
+              <p className="text-xl font-sniglet">
                 I'm a frontend developer with experience in building responsive
                 and optimized sites
               </p>
@@ -37,8 +37,8 @@ function About() {
           <li className="flex flex-row items-center rounded-xl list-none p-6 bg-gradient-to-r from-[#0D0D0D] to-transparent hover:bg-gradient-to-r hover:from-[#0D0D0D] hover:to-[#0D0D0D] transition-all duration-400">
             <img src={backendLogo} alt="Server icon" className="w-12 h-12" />
             <div className="ml-4">
-              <h3 className="text-2xl font-semibold text-orange-400">Backend Developer</h3>
-              <p className="text-xl">
+              <h3 className="text-2xl font-semibold text-orange-400  font-playpen">Backend Developer</h3>
+              <p className="text-xl font-sniglet">
                 I have experience developing fast and optimized back-end systems
                 and APIs
               </p>
@@ -47,8 +47,8 @@ function About() {
           <li className="flex flex-row items-center rounded-xl list-none p-6 bg-gradient-to-r from-[#0D0D0D] to-transparent hover:bg-gradient-to-r hover:from-[#0D0D0D] hover:to-[#0D0D0D] transition-all duration-400">
             <img src={uiLogo} alt="UI icon" className="w-12 h-12" />
             <div className="ml-4">
-              <h3 className="text-2xl font-semibold text-orange-400">UI Designer</h3>
-              <p className="text-xl">
+              <h3 className="text-2xl font-semibold text-orange-400  font-playpen">UI Designer</h3>
+              <p className="text-xl font-sniglet">
                 I have designed multiple landing pages and have created design
                 systems as well
               </p>

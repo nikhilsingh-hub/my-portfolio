@@ -6,7 +6,7 @@ function SkillComponent({ skillName, proficiency, icon }) {
   const strokeDashoffset = circumference - (proficiency / 100) * circumference;
 
   return (
-    <div className='flex flex-col justify-center items-center transition duration-500 hover:scale-125'>
+    <div className='flex flex-col justify-center items-center transition duration-500 hover:scale-125 hover:text-orange-400'>
       <div className='relative h-40 w-40 flex justify-center items-center rounded-full hover:border-2 hover:border-orange-500'>
         {/* Outer Circle with Progress Bar */}
         <svg className='absolute' height="160" width="160">
@@ -42,7 +42,7 @@ function SkillComponent({ skillName, proficiency, icon }) {
           <img src={icon} alt={skillName} className='h-20 w-20 rounded-full skill-icon' />
         </div>
       </div>
-      <h2 className='text-white font-mono'>{skillName}</h2>
+      <h2 className='text-white font-sniglet'>{skillName}</h2>
     </div>
   );
 }

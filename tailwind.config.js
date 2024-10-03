@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         playpen: ['"Playpen Sans"', 'sans-serif'],
+        sniglet: ['"Sniglet"', 'cursive'],
+        akaya: ['"Akaya Telivigala"', 'cursive'],
       },
     },
   },

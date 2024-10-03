@@ -47,7 +47,7 @@ function Header({ siteLinks }) {
         Nikhil Singh
       </h1>
       <nav className='w-1/3'>
-        <ul className='flex gap-8 justify-center h-full items-center font-bold tracking-widest text-white'>
+        <ul className='flex gap-8 justify-center h-full items-center font-sniglet font-medium tracking-widest text-white'>
           {tabs.map((ele, index) => (
             <Link
               key={index}
