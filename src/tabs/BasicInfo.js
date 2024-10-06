@@ -41,15 +41,15 @@ function BasicInfo({ aboutData }) {
                         <div className="intro p-2 mb-10 h-auto lg:h-80">
                             <h3 className="p-2 relative">
                                 <div className="mb-4">
-                                    <span className="text-white font-extrabold text-2xl md:text-3xl">Hello,<br /> This is</span>
-                                    <span className="text-orange-400 font-extrabold text-4xl md:text-5xl"> {aboutData.Name}</span>
+                                    <span className="text-white font-extrabold text-xl md:text-3xl">Hello,<br /> This is</span>
+                                    <span className="text-orange-400 font-extrabold text-2xl md:text-5xl"> {aboutData.Name}</span>
                                 </div>
                                 {intro.map((ele, index) => {
                                     let objectKey = Object.keys(ele)[0];
                                     return (
                                         <div className="mb-4" key={index}>
-                                            <span className="text-white text-lg md:text-2xl font-sniglet">{objectKey.replace('_', ' ')}:</span>
-                                            <span className="text-orange-400 text-lg md:text-2xl font-sniglet"> {ele[objectKey]}</span>
+                                            <span className="text-white text-sm md:text-2xl font-sniglet">{objectKey.replace('_', ' ')}:</span>
+                                            <span className="text-orange-400 text-sm md:text-2xl font-sniglet"> {ele[objectKey]}</span>
                                         </div>
                                     );
                                 })}
