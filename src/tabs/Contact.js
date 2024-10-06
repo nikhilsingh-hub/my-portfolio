@@ -42,13 +42,13 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
             process.env.REACT_APP_PUBLIC_KEY,
         )
             .then((result) => {
-                setButtonText('Send Message')
                 toast('Email successfully sent!', result.text);
             })
             .catch((error) => {
                 toast('Failed to send email.', error);
             })
             .finally(() => {
+                setButtonText('Send Message')
                 reset()
             });
 
