@@ -28,6 +28,10 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
     const sendEmailFunction = useCallback((data) => {
         setButtonText('Sending...')
+        console.log("Service ID:", process.env.REACT_APP_SERVICE_ID);
+        console.log("Template ID:", process.env.REACT_APP_TEMPLATE_ID);
+        console.log("Public Key:", process.env.REACT_APP_PUBLIC_KEY);
+
         const templateParams = {
             to_name: 'Nikhil',
             from_name: data.name,
