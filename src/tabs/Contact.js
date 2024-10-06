@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Contact({ siteLinks, myEmailId, myAddress }) {
     const [isFocused, setIsFocused] = useState({ namefield: false, emailfield: false, messagefield: false })
+    const [buttonText, setButtonText] = useState('Send Message')
 
     const handleFocus = (field) => {
         setIsFocused((prev) => ({
@@ -26,6 +27,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
     const { register, handleSubmit, formState: { errors }, reset, } = useForm();
 
     const sendEmailFunction = useCallback((data) => {
+        setButtonText('Sending...')
 
         const templateParams = {
             to_name: 'Nikhil',
@@ -47,6 +49,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                 toast('Failed to send email.', error);
             })
             .finally(() => {
+                setButtonText('Send Message')
                 reset()
             });
 
@@ -62,7 +65,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
             <div className='flex flex-col md:flex-row justify-between'>
                 <div className='border-2 border-orange-400 rounded-lg w-full md:w-[50%] flex flex-col gap-6 p-5 md:p-10'>
                     <div>
-                        <p className='text-orange-400 font-bold font-playpen'>Feel free to text me.</p>
+                        <p className='text-orange-400 font-bold font-playpen'>Feel free to reach me.</p>
                     </div>
                     <div>
                         <form onSubmit={handleSubmit(sendEmailFunction)} className='flex flex-col gap-5'>
@@ -114,24 +117,24 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                                     type='submit'
                                     className='p-2 bg-orange-400 font-extrabold rounded-lg text-white float-right hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
                                 >
-                                    Send Message
+                                   {buttonText}
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div className='w-full md:w-[50%] p-5 md:p-10 flex flex-col gap-8 justify-center'>
+                <div className='w-full md:w-[50%] pt-5 pb-5 md:p-10 flex flex-col gap-8 justify-center'>
                     <div className='flex gap-2 text-white sm:font-bold font-playpen text-sm sm:text-xl'>
-                        <div className='p-1 md:p-2 bg-slate-500 rounded-full'>
-                            <img src={email} alt="@" className='h-3 w-3 sm:h-8 sm:w-8' />
+                        <div className='p-2 bg-slate-500 rounded-full'>
+                            <img src={email} alt="@" className='h-4 w-4 sm:h-8 sm:w-8' />
                         </div>
                         <div className='flex justify-center items-center'>{myEmailId}</div>
                     </div>
 
                     <div className='flex gap-2 text-white sm:font-bold font-playpen text-sm sm:text-xl'>
-                        <div className='p-1 md:p-2 bg-slate-500 rounded-full'>
-                            <img src={addressIcon} alt="Address" className='h-3 w-3 sm:h-8 sm:w-8' />
+                        <div className='p-2 bg-slate-500 rounded-full'>
+                            <img src={addressIcon} alt="Address" className='h-4 w-4 sm:h-8 sm:w-8' />
                         </div>
                         <div className='flex justify-center items-center'>{myAddress}</div>
                     </div>
@@ -139,8 +142,8 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                     <div className='flex justify-start items-center'>
                         <div className="flex items-center justify-between gap-1 w-full md:w-1/2 rounded-full transition-all duration-300 ease-in-out">
                             {siteLinks.map(element => (
-                                <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-4 bg-orange-400 bg-opacity-90 rounded-full'>
-                                    <img src={element.icon} alt={element.alt} className='h-6 w-6transition-transform duration-500 hover:scale-150 hover:rotate-12' />
+                                <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-3 sm:p-4 bg-orange-400 bg-opacity-90 rounded-full'>
+                                    <img src={element.icon} alt={element.alt} className='h-4 w-4 sm:h-6 sm:w-6 transition-transform duration-500 hover:scale-150 hover:rotate-12' />
                                 </a>
                             ))}
                         </div>
