@@ -62,7 +62,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
             <div className='flex flex-col md:flex-row justify-between'>
                 <div className='border-2 border-orange-400 rounded-lg w-full md:w-[50%] flex flex-col gap-6 p-5 md:p-10'>
                     <div>
-                        <p className='text-orange-400 font-bold font-playpen'>Don't hesitate, feel free to reach me.</p>
+                        <p className='text-orange-400 font-bold font-playpen'>Feel free to reach me.</p>
                     </div>
                     <div>
                         <form onSubmit={handleSubmit(sendEmailFunction)} className='flex flex-col gap-5'>
