@@ -18,7 +18,7 @@ function ProjectCard({ project, index }) {
   </div>
 
   <div className='p-5 flex justify-center items-center'>
-    <img src={image} alt="image" className='rounded-lg w-[80%] h-auto max-w-[25vw] max-h-[25vh]' />
+    <img src={image} alt="image" className='rounded-lg w-[100%] sm:w-[80%] h-auto sm:max-w-[25vw] sm:max-h-[25vh]' />
   </div>
 
   <div className={`p-4`}>

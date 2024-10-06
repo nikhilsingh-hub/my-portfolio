@@ -121,17 +121,17 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                     </div>
                 </div>
 
-                <div className='w-full md:w-[50%] p-5 md:p-10 flex flex-col gap-8 justify-center'>
-                    <div className='flex gap-2 text-white font-bold font-playpen text-xl'>
+                <div className='w-full md:w-[50%] pt-5 pb-5 md:p-10 flex flex-col gap-8 justify-center'>
+                    <div className='flex gap-2 text-white sm:font-bold font-playpen text-sm sm:text-xl'>
                         <div className='p-2 bg-slate-500 rounded-full'>
-                            <img src={email} alt="@" className='h-8 w-8' />
+                            <img src={email} alt="@" className='h-4 w-4 sm:h-8 sm:w-8' />
                         </div>
                         <div className='flex justify-center items-center'>{myEmailId}</div>
                     </div>
 
-                    <div className='flex gap-2 text-white font-bold font-playpen text-xl'>
+                    <div className='flex gap-2 text-white sm:font-bold font-playpen text-sm sm:text-xl'>
                         <div className='p-2 bg-slate-500 rounded-full'>
-                            <img src={addressIcon} alt="Address" className='h-8 w-8' />
+                            <img src={addressIcon} alt="Address" className='h-4 w-4 sm:h-8 sm:w-8' />
                         </div>
                         <div className='flex justify-center items-center'>{myAddress}</div>
                     </div>
@@ -139,8 +139,8 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                     <div className='flex justify-start items-center'>
                         <div className="flex items-center justify-between w-full md:w-1/2 rounded-full transition-all duration-300 ease-in-out">
                             {siteLinks.map(element => (
-                                <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-4 bg-orange-400 bg-opacity-90 rounded-full'>
-                                    <img src={element.icon} alt={element.alt} className='h-6 w-6 transition-transform duration-500 hover:scale-150 hover:rotate-12' />
+                                <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-3 sm:p-4 bg-orange-400 bg-opacity-90 rounded-full'>
+                                    <img src={element.icon} alt={element.alt} className='h-4 w-4 sm:h-6 sm:w-6 transition-transform duration-500 hover:scale-150 hover:rotate-12' />
                                 </a>
                             ))}
                         </div>
