@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Contact({ siteLinks, myEmailId, myAddress }) {
     const [isFocused, setIsFocused] = useState({ namefield: false, emailfield: false, messagefield: false })
+    const [buttonText, setButtonText] = useState('Send Message')
 
     const handleFocus = (field) => {
         setIsFocused((prev) => ({
@@ -26,7 +27,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
     const { register, handleSubmit, formState: { errors }, reset, } = useForm();
 
     const sendEmailFunction = useCallback((data) => {
-
+        setButtonText('Sending...')
         const templateParams = {
             to_name: 'Nikhil',
             from_name: data.name,
@@ -41,6 +42,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
             process.env.REACT_APP_PUBLIC_KEY,
         )
             .then((result) => {
+                setButtonText('Send Message')
                 toast('Email successfully sent!', result.text);
             })
             .catch((error) => {
@@ -114,7 +116,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                                     type='submit'
                                     className='p-2 bg-orange-400 font-extrabold rounded-lg text-white float-right hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
                                 >
-                                    Send Message
+                                   {buttonText}
                                 </button>
                             </div>
                         </form>
