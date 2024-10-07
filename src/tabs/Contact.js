@@ -57,8 +57,8 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
 
     return (
-        <section id="contactme" className='flex flex-col gap-4 rounded-lg p-5 md:p-10 mx-4 md:mx-14 my-16 md:my-32 overflow-x-hidden bg-[#1A1A1A]'>
-            <div className='flex justify-end items-center gap-4 pr-2'>
+        <section id="contactme" className='flex flex-col gap-8 md:gap-12 overflow-x-hidden bg-[#1A1A1A] rounded-lg p-2 pt-6 pb-6 md:p-10 mx-4 md:mx-14 my-10 md:my-32'>
+            <div className='flex justify-end items-center gap-4 sm:pr-2'>
                 <div className='line'></div>
                 <h2 className="tab-title">Contact</h2>
             </div>

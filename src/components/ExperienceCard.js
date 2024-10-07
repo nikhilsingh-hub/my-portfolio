@@ -39,7 +39,7 @@ function ExperienceCard({ expInfo }) {
 
         {/* Date */}
         <div className='flex justify-end font-sniglet text-gray-400 text-sm italic mb-2'>
-          MAY, 2023 - Present
+          {expInfo.Date}
         </div>
 
         {/* Designation */}

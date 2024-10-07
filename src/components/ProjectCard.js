@@ -35,7 +35,7 @@ function ProjectCard({ project, index }) {
 
     <div>
       <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left font-akaya ${isOnScreen ? 'visible' : ''}`}>Description:</h3>
-      <p className={`mb-4 animate-text-from-right font-sniglet ${isOnScreen ? 'visible' : ''}`}>
+      <p className={`mb-4 animate-text-from-right font-sniglet text-sm sm:text-base ${isOnScreen ? 'visible' : ''}`}>
         {description}
       </p>
     </div>

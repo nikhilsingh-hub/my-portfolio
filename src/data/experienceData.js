@@ -11,7 +11,7 @@ const companies = [{
 },
 
 {
-    CompanyName: 'Self Employed', CompanyIcon: selfLearnIcon, Date: 'Aug, 2019 - Present', Designation: 'Coding and Learning everyday',
+    CompanyName: 'Self Learning', CompanyIcon: selfLearnIcon, Date: 'Aug, 2019 - Present', Designation: 'Coding and Learning everyday',
     isTechDetailsAvailable: true, tech_stacks: [{ name: 'Programming Languages', stacks: 'JavaScript, C++, PHP, JAVA, Python' },
     { name: 'Frameworks & Technologies', stacks: 'React, NextJs, NodeJs, Android Dev, Deep Learning ' },
     { name: 'Core Concepts & Tools', stacks: 'DSA, Git, SVN, OS, CN' }

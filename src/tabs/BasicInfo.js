@@ -48,14 +48,14 @@ function BasicInfo({ aboutData }) {
                                     let objectKey = Object.keys(ele)[0];
                                     return (
                                         <div className="mb-4" key={index}>
-                                            <span className="text-white text-sm md:text-2xl font-sniglet">{objectKey.replace('_', ' ')}:</span>
+                                            <span className="text-white text-base md:text-2xl font-sniglet">{objectKey.replace('_', ' ')}:</span>
                                             <span className="text-orange-400 text-sm md:text-2xl font-sniglet"> {ele[objectKey]}</span>
                                         </div>
                                     );
                                 })}
                             </h3>
                         </div>
-                        <div className='w-fit pl-2 items-center'>
+                        <div className='w-fit pl-4 items-center'>
                             <a href='https://drive.google.com/file/d/1ozJP53JsYn8f32V-oGSF8GxVB7Ly9pRL/view?usp=sharing'
                                 className='bg-orange-400 p-2 md:p-3 rounded-full flex gap-2 items-center font-comic text-lg md:text-xl text-white font-bold hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
                                 target="_blank" rel='noreferrer'>
