@@ -7,7 +7,7 @@ import companies from '../data/experienceData'
 function Experience() {
 
     return (
-        <section id='experience' className='flex flex-col gap-8 md:gap-12 overflow-x-hidden bg-[#1A1A1A] rounded-lg p-6 md:p-10 mx-4 md:mx-14 my-10 md:my-32'>
+        <section id='experience' className='flex flex-col gap-8 md:gap-12 overflow-x-hidden bg-[#1A1A1A] rounded-lg p-2 pt-6 pb-6 md:p-10 mx-4 md:mx-14 my-10 md:my-32'>
         <div className='flex justify-center md:justify-end items-center gap-4 pr-2'>
           <div className='line'></div>
           <h2 className="tab-title">

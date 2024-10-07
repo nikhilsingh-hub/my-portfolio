@@ -5,7 +5,7 @@ function About() {
 
   return (
 
-    <section className="relative bg-[#212121] rounded-lg p-6 sm:p-8 lg:p-10 mx-4 sm:mx-6 md:mx-10 lg:mx-14 my-16 sm:my-24 lg:my-32" id="about">
+    <section className="relative bg-[#212121] rounded-lg p-2 pt-4 pb-4 sm:p-8 lg:p-10 mx-4 sm:mx-6 md:mx-10 lg:mx-14 my-16 sm:my-24 lg:my-32" id="about">
       <div className='flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pr-2'>
         <h2 className="tab-title font-playpen sm:text-xl text-white">
           About

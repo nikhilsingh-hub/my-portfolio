@@ -35,8 +35,8 @@ function BasicInfo({ aboutData }) {
 
     return (
         <section ref={basicInfoRef} className='rounded-lg mx-4 sm:mx-6 md:mx-14 my-14 font-playpen overflow-x-hidden bg-[#1A1A1A]'>
-            <div className="flex flex-col lg:flex-row justify-between p-5 md:p-10">
-                <div className='lg:w-1/2 p-5'>
+            <div className="flex flex-col lg:flex-row justify-between pt-5 pb-5 md:p-10">
+                <div className='lg:w-1/2 pt-5 pb-5 sm:p-5'>
                     <div className="flex flex-col">
                         <div className="intro p-2 mb-10 h-auto lg:h-80">
                             <h3 className="p-2 relative">

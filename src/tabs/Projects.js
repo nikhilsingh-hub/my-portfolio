@@ -5,8 +5,8 @@ import projects from '../data/projectData.js'
 function Projects() {
 
   return ( 
-    <section id='projects' className='flex flex-col gap-20 p-10 bg-[#242424] rounded-lg mx-4 my-16'>
-    <div className='sticky top-16 items-center gap-4 flex p-2'>
+    <section id='projects' className='flex flex-col gap-20 p-4 pt-6 pb-6 sm:p-10 bg-[#242424] rounded-lg mx-4 my-16'>
+    <div className='sticky top-16 items-center gap-4 flex sm:p-2'>  
       <h1 className='tab-title'>
         Projects
       </h1>
