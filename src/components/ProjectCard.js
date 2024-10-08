@@ -6,10 +6,10 @@ function ProjectCard({ project, index }) {
   const { name, tools, description, githublink, image } = project;
   const cardRef = useRef(null);
   const isOnScreen = isElementVisible(cardRef);
-  const heightToStick = [7, 11, 15]
+  // const heightToStick = [7, 11, 15, 19]
 
   return (
-    <div ref={cardRef} className={`w-full md:w-[45%] border-2 border-black rounded-lg sticky overflow-hidden shadow-lg bg-gradient-to-br from-gray-900 to-black text-white`} style={{ top: `${heightToStick[index]}rem` }}>
+    <div ref={cardRef} className={`w-full md:w-[45%] border-2 border-black rounded-lg sticky overflow-hidden shadow-lg bg-gradient-to-br from-gray-900 to-black text-white`} style={{ top: `${7 + index*4}rem` }}>
   <div className='flex items-center justify-between border-b-2 border-orange-400 p-4 text-orange-400'>
     <a href={githublink} target='_blank' rel='noopener noreferrer'>
       <img src={github} className='h-5 w-5 hover:scale-125 hover:rotate-45 transition-all duration-300 ease-in-out' alt="GitHub Link" />
