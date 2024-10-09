@@ -56,7 +56,7 @@ function BasicInfo({ aboutData }) {
                             </h3>
                         </div>
                         <div className='w-fit pl-4 items-center'>
-                            <a href='https://drive.google.com/file/d/1ozJP53JsYn8f32V-oGSF8GxVB7Ly9pRL/view?usp=sharing'
+                            <a href='https://bit.ly/48goayd'
                                 className='bg-orange-400 p-2 md:p-3 rounded-full flex gap-2 items-center font-comic text-lg md:text-xl text-white font-bold hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
                                 target="_blank" rel='noreferrer'>
                                 Resume
