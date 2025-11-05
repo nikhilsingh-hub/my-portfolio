@@ -39,9 +39,9 @@ function ExperienceCard({ expInfo, index }) {
   return (
     <div
       ref={cardRef}
-      className='group relative overflow-hidden rounded-lg bg-gradient-to-br from-slate-900 via-gray-900 to-black border border-orange-400/30 hover:border-orange-400/60 transition-all duration-500 hover:shadow-lg hover:shadow-orange-400/10'
+      className='group relative overflow-hidden rounded-lg bg-gradient-to-br from-slate-900 via-gray-900 to-black border border-orange-400/30 hover:border-orange-400/60 transition-all duration-500 hover:shadow-lg hover:shadow-orange-400/10 w-full max-w-none'
     >
-      <div className={`relative z-10 p-4 popupanimation ${isVisible ? 'play' : ''}`}>
+      <div className={`relative z-10 space-fluid-md popupanimation ${isVisible ? 'play' : ''}`}>
         {/* Company Header */}
         <div className='flex items-center gap-3 mb-4 p-3 rounded-lg bg-gradient-to-r from-orange-400/10 to-transparent border-l-4 border-orange-400'>
           <div className='relative'>
@@ -54,10 +54,10 @@ function ExperienceCard({ expInfo, index }) {
           </div>
           
           <div className='flex-1'>
-            <h3 className='text-orange-400 text-lg md:text-xl font-bold font-playpen group-hover:text-orange-300 transition-colors duration-300'>
+            <h3 className='text-orange-400 text-fluid-xl font-bold font-playpen group-hover:text-orange-300 transition-colors duration-300'>
               {expInfo.CompanyName}
             </h3>
-            <p className='text-gray-400 text-xs font-sniglet mt-1'>
+            <p className='text-gray-400 text-fluid-xs font-sniglet mt-1'>
               {expInfo.Date}
             </p>
           </div>
@@ -69,7 +69,7 @@ function ExperienceCard({ expInfo, index }) {
             <div className='w-1.5 h-1.5 bg-blue-400 rounded-full'></div>
             <span className='text-blue-400 text-xs font-semibold uppercase tracking-wider'>Role</span>
           </div>
-          <p className='text-white text-sm md:text-base font-playpen font-semibold'>
+          <p className='text-white text-fluid-base font-playpen font-semibold'>
             {expInfo.Designation}
           </p>
         </div>
@@ -80,7 +80,7 @@ function ExperienceCard({ expInfo, index }) {
             onClick={openModal}
             className='group/btn flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-400/20 to-orange-600/20 border border-orange-400/30 hover:border-orange-400/60 hover:from-orange-400/30 hover:to-orange-600/30 transition-all duration-300 hover:scale-105'
           >
-            <span className='text-sm font-semibold transition-colors duration-300 text-green-400 group-hover/btn:text-green-300'>
+            <span className='text-fluid-sm font-semibold transition-colors duration-300 text-green-400 group-hover/btn:text-green-300'>
               View Details
             </span>
             <img
@@ -95,12 +95,12 @@ function ExperienceCard({ expInfo, index }) {
       {/* Modal Overlay */}
       {isModalOpen && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-sm animate-fadeIn"
           onClick={closeModal}
         >
           {/* Modal Content */}
           <div 
-            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900 via-gray-900 to-black rounded-xl border border-orange-400/50 shadow-2xl animate-modalSlideIn"
+            className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900 via-gray-900 to-black rounded-xl border border-orange-400/50 shadow-2xl animate-modalSlideIn"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -112,7 +112,7 @@ function ExperienceCard({ expInfo, index }) {
             </button>
 
             {/* Modal Header */}
-            <div className="p-6 border-b border-orange-400/30">
+            <div className="space-fluid-md border-b border-orange-400/30">
               <div className='flex items-center gap-4'>
                 <div className='relative'>
                   <img
@@ -124,13 +124,13 @@ function ExperienceCard({ expInfo, index }) {
                 </div>
                 
                 <div className='flex-1'>
-                  <h2 className='text-orange-400 text-2xl font-bold font-playpen mb-1'>
+                  <h2 className='text-orange-400 text-fluid-2xl font-bold font-playpen mb-1'>
                     {expInfo.CompanyName}
                   </h2>
-                  <p className='text-blue-400 text-lg font-semibold font-playpen mb-1'>
+                  <p className='text-blue-400 text-fluid-lg font-semibold font-playpen mb-1'>
                     {expInfo.Designation}
                   </p>
-                  <p className='text-gray-400 text-sm font-sniglet'>
+                  <p className='text-gray-400 text-fluid-sm font-sniglet'>
                     {expInfo.Date}
                   </p>
                 </div>
@@ -138,10 +138,10 @@ function ExperienceCard({ expInfo, index }) {
             </div>
 
             {/* Modal Body - Tech Stacks */}
-            <div className="p-6">
+            <div className="space-fluid-md">
               <div className='flex items-center gap-2 mb-6'>
                 <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
-                <h3 className='text-purple-400 text-lg font-semibold uppercase tracking-wider'>
+                <h3 className='text-purple-400 text-fluid-lg font-semibold uppercase tracking-wider'>
                   Technology Stack
                 </h3>
               </div>
@@ -151,13 +151,13 @@ function ExperienceCard({ expInfo, index }) {
                   <div key={techIndex} className='p-4 rounded-lg bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/50 hover:border-gray-600'>
                     <div className='flex items-center gap-2 mb-3'>
                       <div className='w-1.5 h-1.5 bg-orange-400 rounded-full'></div>
-                      <span className='text-orange-400 font-semibold font-playpen text-sm uppercase tracking-wide'>
+                      <span className='text-orange-400 font-semibold font-playpen text-fluid-sm uppercase tracking-wide'>
                         {element.name}
                       </span>
                     </div>
                     <div className='flex flex-wrap gap-2'>
                       {element.stacks.split(', ').map((tech, i) => (
-                        <span key={i} className='px-3 py-1.5 text-sm bg-gradient-to-r from-gray-700/50 to-gray-600/50 text-gray-200 rounded-lg border border-gray-600/50 hover:bg-gradient-to-r hover:from-orange-400/20 hover:to-orange-600/20 hover:text-orange-300 hover:border-orange-400/50 transition-all duration-300 cursor-default'>
+                        <span key={i} className='px-3 py-1.5 text-fluid-xs bg-gradient-to-r from-gray-700/50 to-gray-600/50 text-gray-200 rounded-lg border border-gray-600/50 hover:bg-gradient-to-r hover:from-orange-400/20 hover:to-orange-600/20 hover:text-orange-300 hover:border-orange-400/50 transition-all duration-300 cursor-default'>
                           {tech.trim()}
                         </span>
                       ))}
@@ -172,7 +172,7 @@ function ExperienceCard({ expInfo, index }) {
                   onClick={closeModal}
                   className="px-6 py-2 rounded-full bg-gradient-to-r from-gray-600/20 to-gray-700/20 border border-gray-500/30 hover:border-gray-400/60 hover:from-gray-600/30 hover:to-gray-700/30 transition-all duration-300 hover:scale-105"
                 >
-                  <span className="text-sm font-semibold text-gray-300 hover:text-white transition-colors duration-300">
+                  <span className="text-fluid-sm font-semibold text-gray-300 hover:text-white transition-colors duration-300">
                     Close
                   </span>
                 </button>

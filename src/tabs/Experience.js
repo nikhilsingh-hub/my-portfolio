@@ -8,7 +8,7 @@ function Experience() {
     const experienceSection = configLoader.getExperienceSection();
 
     return (
-        <section id='experience' className='flex flex-col gap-6 md:gap-8 overflow-x-hidden bg-[#1A1A1A] rounded-lg p-6 md:p-8 mx-4 md:mx-14 my-10 md:my-20'>
+        <section id='experience' className='flex flex-col gap-6 md:gap-8 overflow-x-hidden bg-[#1A1A1A] rounded-lg space-fluid-lg mx-4 md:mx-14 my-10 md:my-20'>
             {/* Section Header */}
             <div className='flex justify-center md:justify-end items-center gap-4 pr-2'>
                 <div className='line'></div>

@@ -59,21 +59,21 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
 
     return (
-        <section id="contactme" className='flex flex-col gap-8 md:gap-12 overflow-x-hidden bg-[#1A1A1A] rounded-lg p-2 pt-6 pb-6 md:p-10 mx-4 md:mx-14 my-10 md:my-32'>
+        <section id="contactme" className='flex flex-col gap-8 md:gap-12 overflow-x-hidden bg-[#1A1A1A] rounded-lg space-fluid-lg mx-4 md:mx-14 my-10 md:my-32'>
             <div className='flex justify-end items-center gap-4 sm:pr-2'>
                 <div className='line'></div>
                 <h2 className="tab-title">Contact</h2>
             </div>
             <div className='flex flex-col md:flex-row justify-between'>
-                <div className='border-2 border-orange-400 rounded-lg w-full md:w-[50%] flex flex-col gap-6 p-5 md:p-10'>
+                <div className='border-2 border-orange-400 rounded-lg w-full md:w-[50%] flex flex-col gap-6 space-fluid-lg'>
                     <div>
-                        <p className='text-orange-400 font-bold font-playpen'>Feel free to reach me.</p>
+                        <p className='text-orange-400 font-bold font-playpen text-fluid-lg'>Feel free to reach me.</p>
                     </div>
                     <div>
                         <form onSubmit={handleSubmit(sendEmailFunction)} className='flex flex-col gap-5'>
                             {/* Name field */}
                             <div className='flex flex-col gap-4'>
-                                <label htmlFor='namefield' className='text-white font-bold'>Your Name:</label>
+                                <label htmlFor='namefield' className='text-white font-bold text-fluid-base'>Your Name:</label>
                                 <input
                                     id='namefield'
                                     type='text'
@@ -87,7 +87,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
                             {/* Email field */}
                             <div className='flex flex-col gap-4'>
-                                <label htmlFor='emailfield' className='text-white font-bold'>Your Email:</label>
+                                <label htmlFor='emailfield' className='text-white font-bold text-fluid-base'>Your Email:</label>
                                 <input
                                     id='emailfield'
                                     type='text'
@@ -105,7 +105,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
                             {/* Message field */}
                             <div className='flex flex-col gap-4'>
-                                <label htmlFor='bodyfield' className='text-white font-bold'>Message:</label>
+                                <label htmlFor='bodyfield' className='text-white font-bold text-fluid-base'>Message:</label>
                                 <textarea
                                     id='bodyfield'
                                     className={`rounded-lg p-2 ${errors.body ? 'border-red-500' : ''}`}
@@ -126,15 +126,15 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                     </div>
                 </div>
 
-                <div className='w-full md:w-[50%] pt-5 pb-5 md:p-10 flex flex-col gap-8 justify-center'>
-                    <div className='flex gap-2 text-white sm:font-bold font-playpen text-sm sm:text-xl'>
+                <div className='w-full md:w-[50%] space-fluid-lg flex flex-col gap-8 justify-center'>
+                    <div className='flex gap-2 text-white font-bold font-playpen text-fluid-lg'>
                         <div className='p-2 bg-slate-500 rounded-full'>
                             <img src={email} alt="@" className='h-4 w-4 sm:h-8 sm:w-8' />
                         </div>
                         <div className='flex justify-center items-center'>{myEmailId}</div>
                     </div>
 
-                    <div className='flex gap-2 text-white sm:font-bold font-playpen text-sm sm:text-xl'>
+                    <div className='flex gap-2 text-white font-bold font-playpen text-fluid-lg'>
                         <div className='p-2 bg-slate-500 rounded-full'>
                             <img src={addressIcon} alt="Address" className='h-4 w-4 sm:h-8 sm:w-8' />
                         </div>

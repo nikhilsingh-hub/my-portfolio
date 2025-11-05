@@ -96,7 +96,7 @@
       },
       {
         "name": "E-Commerce Beast 🛒⚡",
-        "image": "EmpTrackUI.png",
+        "image": "Ecomm.jpg",
         "githubLink": "https://github.com/nikhilsingh-hub/Ecommerce-Backend",
         "tools": ["Java ☕", "Spring Boot 🚀", "Docker 🐳", "Redis ⚡", "Prometheus 📊", "Custom Message Broker 📨"],
         "description": "A comprehensive e-commerce backend system built with Java and Spring Boot. Features include product management, order processing, and a custom message broker for handling asynchronous operations. Implemented with Docker for containerization and includes monitoring with Prometheus and Redis for caching."

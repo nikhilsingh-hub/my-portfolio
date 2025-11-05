@@ -5,6 +5,7 @@ import valuablegroupImg from '../assets/images/valuablegroup.jpg';
 import selfLearnIcon from '../assets/svg/selfLearn.svg';
 import chatImg from '../assets/images/Chat.png';
 import empUiImg from '../assets/images/EmpTrackUI.png';
+import ecommImg from '../assets/images/Ecomm.jpg';
 import foodeUI from '../assets/images/FoodeUI.png';
 import paytmImg from '../assets/images/paytm.png';
 
@@ -33,6 +34,7 @@ const imageAssets = {
   'selfLearn.svg': selfLearnIcon,
   'Chat.png': chatImg,
   'EmpTrackUI.png': empUiImg,
+  'Ecomm.jpg': ecommImg,
   'FoodeUI.png': foodeUI,
   'paytm.png': paytmImg
 };

@@ -20,9 +20,9 @@ function ProjectCard({ project, index }) {
       <div className="relative z-10">
       {/* Header */}
       <div className='flex items-center justify-between p-4 border-b border-orange-400/30 bg-gradient-to-r from-orange-400/10 to-transparent'>
-        <h2 className='flex-grow text-center font-bold text-lg sm:text-xl font-playpen text-orange-400 group-hover:text-orange-300 transition-colors duration-300'>
-          {name}
-        </h2>
+            <h2 className='flex-grow text-center font-bold text-fluid-xl font-playpen text-orange-400 group-hover:text-orange-300 transition-colors duration-300'>
+              {name}
+            </h2>
         <a 
           href={githublink} 
           target='_blank' 
@@ -34,7 +34,7 @@ function ProjectCard({ project, index }) {
       </div>
 
       {/* Project Image */}
-      <div className='relative p-4 sm:p-6 flex justify-center items-center bg-gradient-to-b from-transparent to-black/20'>
+      <div className='relative space-fluid-md flex justify-center items-center bg-gradient-to-b from-transparent to-black/20'>
         <div className='relative group/img'>
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-blue-400/20 rounded-lg opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 blur-sm"></div>
           <img 
@@ -46,18 +46,18 @@ function ProjectCard({ project, index }) {
       </div>
 
       {/* Content */}
-      <div className='relative z-10 p-4 sm:p-5 space-y-4'>
+      <div className='relative z-10 space-fluid-md space-y-4'>
         {/* Technologies */}
         <div>
           <div className='flex items-center gap-2 mb-3'>
             <div className='w-1.5 h-1.5 bg-orange-400 rounded-full'></div>
-            <h3 className='text-sm sm:text-base text-orange-400 font-semibold uppercase tracking-wider'>Tech Stack</h3>
+            <h3 className='text-fluid-sm text-orange-400 font-semibold uppercase tracking-wider'>Tech Stack</h3>
           </div>
           <div className='flex flex-wrap gap-2'>
             {tools.map((tool, toolIndex) => (
               <span 
                 key={toolIndex} 
-                className='px-3 py-1 text-xs sm:text-sm bg-gradient-to-r from-orange-400/20 to-orange-600/20 text-orange-300 rounded-full border border-orange-400/30 hover:border-orange-400/60 hover:from-orange-400/30 hover:to-orange-600/30 transition-all duration-300 cursor-default'
+                className='px-3 py-1 text-fluid-xs bg-gradient-to-r from-orange-400/20 to-orange-600/20 text-orange-300 rounded-full border border-orange-400/30 hover:border-orange-400/60 hover:from-orange-400/30 hover:to-orange-600/30 transition-all duration-300 cursor-default'
               >
                 {tool}
               </span>
@@ -69,9 +69,9 @@ function ProjectCard({ project, index }) {
         <div>
           <div className='flex items-center gap-2 mb-3'>
             <div className='w-1.5 h-1.5 bg-blue-400 rounded-full'></div>
-            <h3 className='text-sm sm:text-base text-blue-400 font-semibold uppercase tracking-wider'>Overview</h3>
+            <h3 className='text-fluid-sm text-blue-400 font-semibold uppercase tracking-wider'>Overview</h3>
           </div>
-          <p className='text-gray-300 text-sm sm:text-base leading-relaxed font-sniglet'>
+          <p className='text-gray-300 text-fluid-base leading-relaxed font-sniglet'>
             {description}
           </p>
         </div>
