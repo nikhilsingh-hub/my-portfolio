@@ -39,53 +39,56 @@ function ExperienceCard({ expInfo, index }) {
   return (
     <div
       ref={cardRef}
-      className='group relative overflow-hidden rounded-lg bg-gradient-to-br from-slate-900 via-gray-900 to-black border border-orange-400/30 hover:border-orange-400/60 transition-all duration-500 hover:shadow-lg hover:shadow-orange-400/10 w-full max-w-none'
+      className='group relative overflow-hidden rounded-xl bg-gradient-to-br from-black via-gray-900 to-black border border-orange-400/30 hover:border-orange-400/60 transition-all duration-500 hover:shadow-lg hover:shadow-orange-400/20 w-full max-w-none'
     >
-      <div className={`relative z-10 space-fluid-md popupanimation ${isVisible ? 'play' : ''}`}>
+      {/* Subtle background glow */}
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-400/5 to-orange-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      <div className={`relative z-10 p-4 md:p-6 popupanimation ${isVisible ? 'play' : ''}`}>
         {/* Company Header */}
-        <div className='flex items-center gap-3 mb-4 p-3 rounded-lg bg-gradient-to-r from-orange-400/10 to-transparent border-l-4 border-orange-400'>
+        <div className='flex items-center gap-4 mb-6 p-4 rounded-xl bg-gradient-to-r from-orange-400/10 to-transparent border-l-4 border-orange-400'>
           <div className='relative'>
             <img
               src={expInfo.CompanyIcon}
-              className='w-10 h-10 object-cover rounded-lg border-2 border-orange-400/50 shadow-md p-2 bg-gray-800 group-hover:border-orange-400 transition-colors duration-300'
+              className='w-12 h-12 object-cover rounded-xl border-2 border-orange-400/50 shadow-md p-2 bg-black group-hover:border-orange-400 transition-colors duration-300'
               alt='Company Logo'
             />
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-gray-900"></div>
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full border-2 border-black"></div>
           </div>
           
           <div className='flex-1'>
-            <h3 className='text-orange-400 text-fluid-xl font-bold font-playpen group-hover:text-orange-300 transition-colors duration-300'>
+            <h3 className='text-orange-400 text-lg md:text-xl font-bold font-playpen group-hover:text-orange-300 transition-colors duration-300'>
               {expInfo.CompanyName}
             </h3>
-            <p className='text-gray-400 text-fluid-xs font-sniglet mt-1'>
+            <p className='text-gray-400 text-sm font-sniglet mt-1'>
               {expInfo.Date}
             </p>
           </div>
         </div>
 
         {/* Designation */}
-        <div className='mb-4 p-3 rounded-lg bg-gradient-to-r from-blue-500/10 to-transparent border-l-4 border-blue-400'>
-          <div className='flex items-center gap-2 mb-1'>
-            <div className='w-1.5 h-1.5 bg-blue-400 rounded-full'></div>
-            <span className='text-blue-400 text-xs font-semibold uppercase tracking-wider'>Role</span>
+        <div className='mb-6 p-4 rounded-xl bg-gradient-to-r from-white/5 to-transparent border-l-4 border-white/50'>
+          <div className='flex items-center gap-2 mb-2'>
+            <div className='w-2 h-2 bg-white rounded-full'></div>
+            <span className='text-white/70 text-xs font-semibold uppercase tracking-wider'>Role</span>
           </div>
-          <p className='text-white text-fluid-base font-playpen font-semibold'>
+          <p className='text-white text-base md:text-lg font-playpen font-semibold'>
             {expInfo.Designation}
           </p>
         </div>
 
         {/* View Details Button */}
-        <div className='flex justify-center mt-4'>
+        <div className='flex justify-center'>
           <button 
             onClick={openModal}
-            className='group/btn flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-400/20 to-orange-600/20 border border-orange-400/30 hover:border-orange-400/60 hover:from-orange-400/30 hover:to-orange-600/30 transition-all duration-300 hover:scale-105'
+            className='group/btn flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-orange-400/20 to-orange-600/20 border border-orange-400/30 hover:border-orange-400/60 hover:from-orange-400/30 hover:to-orange-600/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-400/25'
           >
-            <span className='text-fluid-sm font-semibold transition-colors duration-300 text-green-400 group-hover/btn:text-green-300'>
+            <span className='text-sm md:text-base font-semibold transition-colors duration-300 text-white group-hover/btn:text-orange-300'>
               View Details
             </span>
             <img
               src={dropdown}
-              className='h-3 w-3 transition-all duration-300 group-hover/btn:scale-110 rotate-0'
+              className='h-4 w-4 transition-all duration-300 group-hover/btn:scale-110 group-hover/btn:brightness-125'
               alt="View Details"
             />
           </button>
@@ -95,42 +98,47 @@ function ExperienceCard({ expInfo, index }) {
       {/* Modal Overlay */}
       {isModalOpen && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-sm animate-fadeIn"
-          onClick={closeModal}
+          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
+          onClick={(e) => {
+            // Only close if clicking on the overlay itself, not its children
+            if (e.target === e.currentTarget) {
+              closeModal();
+            }
+          }}
         >
           {/* Modal Content */}
           <div 
-            className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900 via-gray-900 to-black rounded-xl border border-orange-400/50 shadow-2xl animate-modalSlideIn"
+            className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl border border-orange-400/50 shadow-2xl animate-modalSlideIn"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-red-500/20 hover:bg-red-500/30 border border-red-400/30 hover:border-red-400/60 transition-all duration-300 group"
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-orange-400/20 hover:bg-orange-400/30 border border-orange-400/30 hover:border-orange-400/60 transition-all duration-300 group"
             >
-              <span className="text-red-400 group-hover:text-red-300 text-lg font-bold">×</span>
+              <span className="text-orange-400 group-hover:text-white text-xl font-bold">×</span>
             </button>
 
             {/* Modal Header */}
-            <div className="space-fluid-md border-b border-orange-400/30">
-              <div className='flex items-center gap-4'>
+            <div className="p-6 border-b border-orange-400/30">
+              <div className='flex items-center gap-6'>
                 <div className='relative'>
                   <img
                     src={expInfo.CompanyIcon}
-                    className='w-16 h-16 object-cover rounded-xl border-2 border-orange-400/50 shadow-lg p-3 bg-gray-800'
+                    className='w-16 h-16 object-cover rounded-2xl border-2 border-orange-400/50 shadow-lg p-3 bg-black'
                     alt='Company Logo'
                   />
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-gray-900"></div>
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full border-2 border-black"></div>
                 </div>
                 
                 <div className='flex-1'>
-                  <h2 className='text-orange-400 text-fluid-2xl font-bold font-playpen mb-1'>
+                  <h2 className='text-orange-400 text-2xl md:text-3xl font-bold font-playpen mb-2'>
                     {expInfo.CompanyName}
                   </h2>
-                  <p className='text-blue-400 text-fluid-lg font-semibold font-playpen mb-1'>
+                  <p className='text-white text-lg md:text-xl font-semibold font-playpen mb-1'>
                     {expInfo.Designation}
                   </p>
-                  <p className='text-gray-400 text-fluid-sm font-sniglet'>
+                  <p className='text-gray-400 text-sm font-sniglet'>
                     {expInfo.Date}
                   </p>
                 </div>
@@ -138,26 +146,26 @@ function ExperienceCard({ expInfo, index }) {
             </div>
 
             {/* Modal Body - Tech Stacks */}
-            <div className="space-fluid-md">
-              <div className='flex items-center gap-2 mb-6'>
-                <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
-                <h3 className='text-purple-400 text-fluid-lg font-semibold uppercase tracking-wider'>
+            <div className="p-6">
+              <div className='flex items-center gap-3 mb-6'>
+                <div className='w-3 h-3 bg-orange-400 rounded-full'></div>
+                <h3 className='text-orange-400 text-lg md:text-xl font-semibold uppercase tracking-wider'>
                   Technology Stack
                 </h3>
               </div>
 
-              <div className='grid grid-cols-1 gap-4'>
+              <div className='grid grid-cols-1 gap-6'>
                 {expInfo.tech_stacks.map((element, techIndex) => (
-                  <div key={techIndex} className='p-4 rounded-lg bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/50 hover:border-gray-600'>
-                    <div className='flex items-center gap-2 mb-3'>
-                      <div className='w-1.5 h-1.5 bg-orange-400 rounded-full'></div>
-                      <span className='text-orange-400 font-semibold font-playpen text-fluid-sm uppercase tracking-wide'>
+                  <div key={techIndex} className='p-5 rounded-xl bg-gradient-to-r from-white/5 to-white/10 hover:from-orange-400/10 hover:to-orange-600/10 transition-all duration-300 border border-white/10 hover:border-orange-400/30'>
+                    <div className='flex items-center gap-3 mb-4'>
+                      <div className='w-2 h-2 bg-orange-400 rounded-full'></div>
+                      <span className='text-orange-400 font-semibold font-playpen text-sm md:text-base uppercase tracking-wide'>
                         {element.name}
                       </span>
                     </div>
-                    <div className='flex flex-wrap gap-2'>
+                    <div className='flex flex-wrap gap-3'>
                       {element.stacks.split(', ').map((tech, i) => (
-                        <span key={i} className='px-3 py-1.5 text-fluid-xs bg-gradient-to-r from-gray-700/50 to-gray-600/50 text-gray-200 rounded-lg border border-gray-600/50 hover:bg-gradient-to-r hover:from-orange-400/20 hover:to-orange-600/20 hover:text-orange-300 hover:border-orange-400/50 transition-all duration-300 cursor-default'>
+                        <span key={i} className='px-4 py-2 text-sm bg-gradient-to-r from-black/50 to-gray-900/50 text-white rounded-lg border border-white/20 hover:bg-gradient-to-r hover:from-orange-400/20 hover:to-orange-600/20 hover:text-orange-300 hover:border-orange-400/50 transition-all duration-300 cursor-default'>
                           {tech.trim()}
                         </span>
                       ))}
@@ -167,12 +175,12 @@ function ExperienceCard({ expInfo, index }) {
               </div>
 
               {/* Modal Footer */}
-              <div className="flex justify-center mt-6 pt-4 border-t border-gray-700/50">
+              <div className="flex justify-center mt-8 pt-6 border-t border-white/10">
                 <button
                   onClick={closeModal}
-                  className="px-6 py-2 rounded-full bg-gradient-to-r from-gray-600/20 to-gray-700/20 border border-gray-500/30 hover:border-gray-400/60 hover:from-gray-600/30 hover:to-gray-700/30 transition-all duration-300 hover:scale-105"
+                  className="px-8 py-3 rounded-full bg-gradient-to-r from-orange-400/20 to-orange-600/20 border border-orange-400/30 hover:border-orange-400/60 hover:from-orange-400/30 hover:to-orange-600/30 transition-all duration-300 hover:scale-105"
                 >
-                  <span className="text-fluid-sm font-semibold text-gray-300 hover:text-white transition-colors duration-300">
+                  <span className="text-sm md:text-base font-semibold text-white hover:text-orange-300 transition-colors duration-300">
                     Close
                   </span>
                 </button>

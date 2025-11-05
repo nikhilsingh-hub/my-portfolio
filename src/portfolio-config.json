@@ -40,7 +40,7 @@
       },
       {
         "title": "Full Stack Engineer 🔧",
-        "description": "From React frontends to Spring Boot APIs, I enjoy building complete solutions. I've worked on projects serving thousands of users and learned a lot from both successes and failures along the way.",
+        "description": "From React frontends to Spring Boot APIs, I enjoy building complete solutions. I've worked on projects serving millions of users and learned a lot from both successes and failures along the way.",
         "icon": "frontendLogo"
       },
       {
@@ -101,13 +101,6 @@
     "title": "Projects",
     "projects": [
       {
-        "name": "E-Commerce Beast 🛒⚡",
-        "image": "Ecomm.jpg",
-        "githubLink": "https://github.com/nikhilsingh-hub/Ecommerce-Backend",
-        "tools": ["Java ☕", "Spring Boot 🚀", "Docker 🐳", "Redis ⚡", "Prometheus 📊", "Custom Message Broker 📨"],
-        "description": "A comprehensive e-commerce backend system built with Java and Spring Boot. Features include product management, order processing, and a custom message broker for handling asynchronous operations. Implemented with Docker for containerization and includes monitoring with Prometheus and Redis for caching."
-      },
-      {
         "name": "Chat App 💬",
         "image": "Chat.png",
         "githubLink": "https://github.com/nikhilsingh-hub/chatApp",
@@ -120,6 +113,13 @@
         "githubLink": "https://github.com/nikhilsingh-hub/Food-Delivery-App",
         "tools": ["MERN Stack 🥞", "Payment Gateway 💳", "Redux Toolkit 🧰"],
         "description": "A full-stack food delivery application with user authentication, cart management, and payment gateway integration. Built using the MERN stack with Redux for state management. Focused on creating a smooth user experience from browsing to checkout."
+      },
+      {
+        "name": "E-Commerce Beast 🛒⚡",
+        "image": "Ecomm.jpg",
+        "githubLink": "https://github.com/nikhilsingh-hub/Ecommerce-Backend",
+        "tools": ["Java ☕", "Spring Boot 🚀", "Docker 🐳", "Redis ⚡", "Prometheus 📊", "Custom Message Broker 📨"],
+        "description": "A comprehensive e-commerce backend system built with Java and Spring Boot. Features include product management, order processing, and a custom message broker for handling asynchronous operations. Implemented with Docker for containerization and includes monitoring with Prometheus and Redis for caching."
       }
     ]
   },
