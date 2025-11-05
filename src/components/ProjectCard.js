@@ -6,7 +6,6 @@ function ProjectCard({ project, index }) {
   const { name, tools, description, githublink, image } = project;
   const cardRef = useRef(null);
   const isOnScreen = isElementVisible(cardRef);
-
   const heightToStick = [7, 11, 15];
 
   return (
@@ -18,8 +17,9 @@ function ProjectCard({ project, index }) {
       {/* Glowing background effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-orange-400/5 via-transparent to-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
+      <div className="relative z-10">
       {/* Header */}
-      <div className='relative z-10 flex items-center justify-between p-4 border-b border-orange-400/30 bg-gradient-to-r from-orange-400/10 to-transparent'>
+      <div className='flex items-center justify-between p-4 border-b border-orange-400/30 bg-gradient-to-r from-orange-400/10 to-transparent'>
         <h2 className='flex-grow text-center font-bold text-lg sm:text-xl font-playpen text-orange-400 group-hover:text-orange-300 transition-colors duration-300'>
           {name}
         </h2>
@@ -80,6 +80,7 @@ function ProjectCard({ project, index }) {
         <div className="pt-3 flex justify-center">
           <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400/50 to-transparent"></div>
         </div>
+      </div>
       </div>
     </div>
   );
