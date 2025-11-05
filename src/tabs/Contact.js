@@ -10,6 +10,7 @@ import configLoader from '../utils/configLoader.js';
 function Contact({ siteLinks, myEmailId, myAddress }) {
     const contactSection = configLoader.getContactSection();
     const [isFocused, setIsFocused] = useState({ namefield: false, emailfield: false, messagefield: false })
+    const [buttonText, setButtonText] = useState('Send Message')
 
     const handleFocus = (field) => {
         setIsFocused((prev) => ({
@@ -28,6 +29,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
     const { register, handleSubmit, formState: { errors }, reset, } = useForm();
 
     const sendEmailFunction = useCallback((data) => {
+        setButtonText('Sending...')
 
         const templateParams = {
             to_name: contactSection.emailRecipient,
@@ -49,6 +51,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                 toast('Failed to send email.', error);
             })
             .finally(() => {
+                setButtonText('Send Message')
                 reset()
             });
 
@@ -56,8 +59,8 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
 
 
     return (
-        <section id="contactme" className='flex flex-col gap-4 rounded-lg p-5 md:p-10 mx-4 md:mx-14 my-16 md:my-32 overflow-x-hidden bg-[#1A1A1A]'>
-            <div className='flex justify-end items-center gap-4 pr-2'>
+        <section id="contactme" className='flex flex-col gap-8 md:gap-12 overflow-x-hidden bg-[#1A1A1A] rounded-lg p-2 pt-6 pb-6 md:p-10 mx-4 md:mx-14 my-10 md:my-32'>
+            <div className='flex justify-end items-center gap-4 sm:pr-2'>
                 <div className='line'></div>
                 <h2 className="tab-title">Contact</h2>
             </div>
@@ -116,24 +119,24 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                                     type='submit'
                                     className='p-2 bg-orange-400 font-extrabold rounded-lg text-white float-right hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
                                 >
-                                    Send Message
+                                   {buttonText}
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div className='w-full md:w-[50%] p-5 md:p-10 flex flex-col gap-8 justify-center'>
-                    <div className='flex gap-2 text-white font-bold font-playpen text-xl'>
+                <div className='w-full md:w-[50%] pt-5 pb-5 md:p-10 flex flex-col gap-8 justify-center'>
+                    <div className='flex gap-2 text-white sm:font-bold font-playpen text-sm sm:text-xl'>
                         <div className='p-2 bg-slate-500 rounded-full'>
-                            <img src={email} alt="@" className='h-8 w-8' />
+                            <img src={email} alt="@" className='h-4 w-4 sm:h-8 sm:w-8' />
                         </div>
                         <div className='flex justify-center items-center'>{myEmailId}</div>
                     </div>
 
-                    <div className='flex gap-2 text-white font-bold font-playpen text-xl'>
+                    <div className='flex gap-2 text-white sm:font-bold font-playpen text-sm sm:text-xl'>
                         <div className='p-2 bg-slate-500 rounded-full'>
-                            <img src={addressIcon} alt="Address" className='h-8 w-8' />
+                            <img src={addressIcon} alt="Address" className='h-4 w-4 sm:h-8 sm:w-8' />
                         </div>
                         <div className='flex justify-center items-center'>{myAddress}</div>
                     </div>
@@ -141,8 +144,8 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
                     <div className='flex justify-start items-center'>
                         <div className="flex items-center justify-between w-full md:w-1/2 rounded-full transition-all duration-300 ease-in-out">
                             {siteLinks.map(element => (
-                                <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-4 bg-orange-400 bg-opacity-90 rounded-full'>
-                                    <img src={element.icon} alt={element.alt} className='h-6 w-6 transition-transform duration-500 hover:scale-150 hover:rotate-12' />
+                                <a key={element.link} href={element.link} target="_blank" rel='noreferrer' className='p-3 sm:p-4 bg-orange-400 bg-opacity-90 rounded-full'>
+                                    <img src={element.icon} alt={element.alt} className='h-4 w-4 sm:h-6 sm:w-6 transition-transform duration-500 hover:scale-150 hover:rotate-12' />
                                 </a>
                             ))}
                         </div>
