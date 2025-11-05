@@ -5,8 +5,10 @@ import { useForm } from "react-hook-form"
 import addressIcon from '../assets/svg/addressIcon.svg'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import configLoader from '../utils/configLoader.js';
 
 function Contact({ siteLinks, myEmailId, myAddress }) {
+    const contactSection = configLoader.getContactSection();
     const [isFocused, setIsFocused] = useState({ namefield: false, emailfield: false, messagefield: false })
 
     const handleFocus = (field) => {
@@ -28,7 +30,7 @@ function Contact({ siteLinks, myEmailId, myAddress }) {
     const sendEmailFunction = useCallback((data) => {
 
         const templateParams = {
-            to_name: 'Nikhil',
+            to_name: contactSection.emailRecipient,
             from_name: data.name,
             contact_info: data.email,
             message: data.body,

@@ -1,0 +1,115 @@
+{
+  "personalInfo": {
+    "name": "Nikhil Singh",
+    "joiningDate": "2023-05-22",
+    "recentEducation": "Btech, ECE",
+    "college": "NIT Uttarakhand",
+    "currentDesignation": "Backend Developer",
+    "emailId": "nikhilsingh35911298@gmail.com",
+    "address": "Noida, UttarPradesh, 844101",
+    "resumeLink": "https://drive.google.com/file/d/1czYg_vC-1rYw9EB-vm8aL9Hc8w-2SZup/view?usp=drive_link"
+  },
+  "aboutSection": {
+    "title": "About",
+    "roles": [
+      {
+        "title": "Backend Developer",
+        "description": "Specialized in building scalable backend systems at Paytm with AWS, Redis caching, and Kafka. Achieved 30% infrastructure cost reduction through optimized caching architectures and performance tuning.",
+        "icon": "backendLogo"
+      },
+      {
+        "title": "Full Stack Engineer",
+        "description": "Delivered end-to-end solutions handling 100,000+ daily requests. Expert in Node.js APIs, database optimization, and MERN stack applications deployed across 15,000+ UK schools.",
+        "icon": "frontendLogo"
+      },
+      {
+        "title": "System Architect",
+        "description": "Designed distributed systems with custom message brokers, implemented CI/CD pipelines, and optimized search infrastructure using Elasticsearch. Published research in deep learning for medical applications.",
+        "icon": "uiLogo"
+      }
+    ]
+  },
+  "skillsSection": {
+    "title": "SKILLS",
+    "skills": {
+      "nodejs": { "proficiency": 85, "logo": "nodejs" },
+      "react": { "proficiency": 85, "logo": "reactsvg" },
+      "javascript": { "proficiency": 90, "logo": "javascript" },
+      "cplus": { "proficiency": 85, "logo": "cplus" },
+      "mongodb": { "proficiency": 70, "logo": "mongodb" },
+      "mysql": { "proficiency": 85, "logo": "mysql" },
+      "nextjs": { "proficiency": 50, "logo": "nextjs" },
+      "css": { "proficiency": 70, "logo": "css" },
+      "systemdesign": { "proficiency": 70, "logo": "systemdesign" },
+      "docker": { "proficiency": 80, "logo": "docker" },
+      "php": { "proficiency": 80, "logo": "php" },
+      "html": { "proficiency": 90, "logo": "html" }
+    }
+  },
+  "experienceSection": {
+    "title": "Experience",
+    "companies": [
+      {
+        "companyName": "Paytm",
+        "companyIcon": "paytm.png",
+        "date": "Jan, 2025 - Present",
+        "designation": "Backend Developer",
+        "isTechDetailsAvailable": true,
+        "techStacks": [
+          { "name": "Programming Languages", "stacks": "Java, Linux" },
+          { "name": "Frameworks & Technologies", "stacks": "SpringBoot, Hybernate " },
+          { "name": "Tools", "stacks": "AWS, Git, Jenkins, CI/CD, Kafka, SQL, Redis, Kibana, ELK Stack, Jira, Wiki" }
+        ]
+      },
+      {
+        "companyName": "Valuable Group",
+        "companyIcon": "valuablegroup.jpg",
+        "date": "MAY, 2023 - Present",
+        "designation": "Software Developer",
+        "isTechDetailsAvailable": true,
+        "techStacks": [
+          { "name": "Langugages", "stacks": "JavaScript, Java, C++" },
+          { "name": "Frameworks & Technologies", "stacks": "Node.js, React, Android Studio" },
+          { "name": "Databases", "stacks": "MySql, MSSQL, MongoDB" },
+          { "name": "Tools", "stacks": "Wireshark, Postman, Jira, Wiki, Kafka, ELK Stack" }
+        ]
+      }
+    ]
+  },
+  "projectsSection": {
+    "title": "Projects",
+    "projects": [
+      {
+        "name": "Chat App",
+        "image": "Chat.png",
+        "githubLink": "https://github.com/nikhilsingh-hub/chatApp",
+        "tools": ["React", "MongoDb", "Nodejs", "Socket.io"],
+        "description": "Developed a resilient web chat application using the MERN stack and Socket.io for real-time communication."
+      },
+      {
+        "name": "Food Delivery App",
+        "image": "FoodeUI.png",
+        "githubLink": "https://github.com/nikhilsingh-hub/Food-Delivery-App",
+        "tools": ["MERN", "Payment Gateway"],
+        "description": "Created a food delivery app with user authentication, state management using Redux Toolkit, and an integrated payment gateway"
+      },
+      {
+        "name": "Distributed E-Commerce Processing Core",
+        "image": "EmpTrackUI.png",
+        "githubLink": "https://github.com/nikhilsingh-hub/Ecommerce-Backend",
+        "tools": ["Java", "Spring-boot", "MVC", "Docker", "Prometheus", "Redis", "Kibana", "SLF4J + Logback or Log4j2", " JUnit + Mockito"],
+        "description": "Java-based backend for an e‑commerce platform enabling sellers to publish products and users to search, browse, and place orders. Provides RESTful APIs for product management, search, cart and order workflows, and seller administration. Includes its own lightweight message broker for internal asynchronous processing (order events, notifications, inventory updates). Designed for extensibility and production readiness with persistence, validation, and authentication layers"
+      }
+    ]
+  },
+  "contactSection": {
+    "title": "Contact Me",
+    "emailRecipient": "Nikhil",
+    "socialLinks": {
+      "github": "https://github.com/nikhilsingh-hub",
+      "linkedin": "https://linkedin.com/in/nikhilsingh-hub",
+      "instagram": "https://instagram.com/nikhilsingh-hub",
+      "leetcode": "https://leetcode.com/nikhilsingh-hub"
+    }
+  }
+}

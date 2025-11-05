@@ -1,30 +1,18 @@
 import React, { forwardRef } from 'react';
 import SkillComponent from '../components/SkillComponent';
 import '../css/skills.css'
-import { nodejs, reactsvg, javascript, cplus, mongodb, mysql, nextjs, css, systemdesign, docker, php, html } from '../context.js';
+import configLoader from '../utils/configLoader.js';
 
 const Skills = forwardRef(() => {
-  const skills = {
-    nodejs: { prof: 85, logo: nodejs },
-    react: { prof: 85, logo: reactsvg },
-    javascript: { prof: 90, logo: javascript },
-    cplus: { prof: 85, logo: cplus },
-    mongodb: { prof: 70, logo: mongodb },
-    mysql: { prof: 85, logo: mysql },
-    nextjs: { prof: 50, logo: nextjs },
-    css: { prof: 70, logo: css },
-    systemdesign: { prof: 70, logo: systemdesign },
-    docker: { prof: 80, logo: docker },
-    php: { prof: 80, logo: php },
-    html: { prof: 90, logo: html },
-  };
+  const skillsSection = configLoader.getSkillsSection();
+  const skills = skillsSection.skills;
 
   return (
     <section id="skills" className="p-5 md:p-10 overflow-x-hidden bg-[#212121] rounded-lg mx-4 md:mx-14 my-10 z-10">
   <div className="flex flex-col items-center justify-center gap-4 h-fit">
     <div className='flex flex-col md:flex-row items-center gap-4'>
       <div className='line'></div>
-      <h2 className="tab-title">SKILLS</h2>
+      <h2 className="tab-title">{skillsSection.title}</h2>
       <div className='line'></div>
     </div>
 
@@ -34,7 +22,7 @@ const Skills = forwardRef(() => {
           <SkillComponent
             key={skill}
             skillName={skill.toUpperCase()}
-            proficiency={skills[skill].prof}
+            proficiency={skills[skill].proficiency}
             icon={skills[skill].logo}
           />
         ))}
@@ -43,7 +31,7 @@ const Skills = forwardRef(() => {
           <SkillComponent
             key={skill + '-duplicate'}
             skillName={skill}
-            proficiency={skills[skill].prof}
+            proficiency={skills[skill].proficiency}
             icon={skills[skill].logo}
           />
         ))}

@@ -95,17 +95,64 @@ code {
 
 
 .tech-details {
-  height: 0;
+  max-height: 0;
   padding: 0;
   opacity: 0;
   overflow: hidden;
-  transition: height 1s linear, padding 1s linear, opacity 1s linear;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+              padding 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tech-details.visible {
-  height: auto; /* Adjust to fit the content */
-  padding: 10px; /* Or the padding you want */
+  max-height: 1000px; /* Large enough to accommodate content */
+  padding: 16px 0;
   opacity: 1;
+}
+
+/* Enhanced experience card animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(251, 146, 60, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(251, 146, 60, 0.2);
+  }
+}
+
+.experience-card-enter {
+  animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.experience-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Project card animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .active {

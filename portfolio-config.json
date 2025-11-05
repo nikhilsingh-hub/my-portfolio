@@ -1,0 +1,114 @@
+{
+  "personalInfo": {
+    "name": "Nikhil Singh",
+    "joiningDate": "2023-05-22",
+    "recentEducation": "Btech, ECE",
+    "college": "NIT Uttarakhand",
+    "currentDesignation": "Fullstack Developer",
+    "emailId": "nikhilsingh35911298@gmail.com",
+    "address": "Noida, UttarPradesh, 844101"
+  },
+  "aboutSection": {
+    "title": "About",
+    "roles": [
+      {
+        "title": "Frontend Developer",
+        "description": "I'm a frontend developer with experience in building responsive and optimized sites.",
+        "icon": "frontendLogo"
+      },
+      {
+        "title": "Backend Developer", 
+        "description": "I have experience developing fast and optimized back-end systems and APIs.",
+        "icon": "backendLogo"
+      },
+      {
+        "title": "UI Designer",
+        "description": "I have designed multiple landing pages and have created design systems as well.",
+        "icon": "uiLogo"
+      }
+    ]
+  },
+  "skillsSection": {
+    "title": "SKILLS",
+    "skills": {
+      "nodejs": { "proficiency": 85, "logo": "nodejs" },
+      "react": { "proficiency": 85, "logo": "reactsvg" },
+      "javascript": { "proficiency": 90, "logo": "javascript" },
+      "cplus": { "proficiency": 85, "logo": "cplus" },
+      "mongodb": { "proficiency": 70, "logo": "mongodb" },
+      "mysql": { "proficiency": 85, "logo": "mysql" },
+      "nextjs": { "proficiency": 50, "logo": "nextjs" },
+      "css": { "proficiency": 70, "logo": "css" },
+      "systemdesign": { "proficiency": 70, "logo": "systemdesign" },
+      "docker": { "proficiency": 80, "logo": "docker" },
+      "php": { "proficiency": 80, "logo": "php" },
+      "html": { "proficiency": 90, "logo": "html" }
+    }
+  },
+  "experienceSection": {
+    "title": "Experience",
+    "companies": [
+      {
+        "companyName": "Valuable Group",
+        "companyIcon": "valuablegroup.jpg",
+        "date": "MAY, 2023 - Present",
+        "designation": "Software Developer",
+        "isTechDetailsAvailable": true,
+        "techStacks": [
+          { "name": "Software Dev", "stacks": "JavaScript, Node.js, PHP, React" },
+          { "name": "Android Dev", "stacks": "Android Studio, JAVA" },
+          { "name": "Database", "stacks": "MySql, MSSQL, MongoDB" },
+          { "name": "Others", "stacks": "Wireshark, Documentation" }
+        ]
+      },
+      {
+        "companyName": "Self Employed",
+        "companyIcon": "selfLearn.svg",
+        "date": "Aug, 2019 - Present",
+        "designation": "Coding and Learning everyday",
+        "isTechDetailsAvailable": true,
+        "techStacks": [
+          { "name": "Programming Languages", "stacks": "JavaScript, C++, PHP, JAVA, Python" },
+          { "name": "Frameworks & Technologies", "stacks": "React, NextJs, NodeJs, Android Dev, Deep Learning " },
+          { "name": "Core Concepts & Tools", "stacks": "DSA, Git, SVN, OS, CN" }
+        ]
+      }
+    ]
+  },
+  "projectsSection": {
+    "title": "Projects",
+    "projects": [
+      {
+        "name": "Chat App",
+        "image": "Chat.png",
+        "githubLink": "https://github.com/nikhilsingh-hub/chatApp",
+        "tools": ["React", "MongoDb", "Nodejs", "Socket.io"],
+        "description": "Developed a resilient web chat application using the MERN stack and Socket.io for real-time communication."
+      },
+      {
+        "name": "Food Delivery App",
+        "image": "FoodeUI.png",
+        "githubLink": "https://github.com/nikhilsingh-hub/Food-Delivery-App",
+        "tools": ["MERN", "Payment Gateway"],
+        "description": "Created a food delivery app with user authentication, state management using Redux Toolkit, and an integrated payment gateway"
+      },
+      {
+        "name": "Employee Track App",
+        "image": "EmpTrackUI.png",
+        "githubLink": "https://github.com/nikhilsingh-hub/Spring_boot_MVN_Project",
+        "tools": ["Spring Boot", "Java", "ThymeLeaf", "Docker"],
+        "description": "Built a Spring Boot MVC web app with Thyme leaf for employee record management, and containerized it using Docker for deployment"
+      }
+    ]
+  },
+  "contactSection": {
+    "title": "Contact Me",
+    "emailRecipient": "Nikhil",
+    "socialLinks": {
+      "github": "https://github.com/nikhilsingh-hub",
+      "linkedin": "https://linkedin.com/in/nikhilsingh-hub",
+      "instagram": "https://instagram.com/nikhilsingh-hub",
+      "leetcode": "https://leetcode.com/nikhilsingh-hub"
+    }
+  }
+}

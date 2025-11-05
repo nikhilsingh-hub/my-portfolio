@@ -23,3 +23,47 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+.env.env
+
+# Development guides and documentation (not needed in repo)
+DEVELOPMENT-GUIDE.md
+PORTFOLIO-CONFIG-GUIDE.md
+RESUME-MANAGEMENT-GUIDE.md
+
+# Development Docker files
+Dockerfile.dev
+docker-compose.dev.yml
+package-dev.json
+
+# Development scripts
+dev-start.ps1
+dev-stop.ps1
+prod-deploy.ps1
+
+# Docker volumes and cache
+.docker/
+docker-compose.override.yml
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/

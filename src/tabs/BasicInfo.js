@@ -2,8 +2,10 @@ import React, { useCallback, useEffect, useState, useRef } from 'react'
 import IsVisible from '../hooks/isVisible';
 import PaintingBoy from '../assets/images/PaintingBoy.png'
 import download from '../assets/svg/downlaod.svg'
+import configLoader from '../utils/configLoader.js';
 
 function BasicInfo({ aboutData }) {
+    const personalInfo = configLoader.getPersonalInfo();
     const basicInfoRef = useRef(null);
     const isVisible = IsVisible(basicInfoRef);
     const [intro, setIntro] = useState([{ Experience: '' }, { Recent_Education: '' }, { College: '' }, { Current_Designation: '' }]);
@@ -56,7 +58,7 @@ function BasicInfo({ aboutData }) {
                             </h3>
                         </div>
                         <div className='w-fit pl-2 items-center'>
-                            <a href='https://drive.google.com/file/d/1ozJP53JsYn8f32V-oGSF8GxVB7Ly9pRL/view?usp=sharing'
+                            <a href={personalInfo.resumeLink}
                                 className='bg-orange-400 p-2 md:p-3 rounded-full flex gap-2 items-center font-comic text-lg md:text-xl text-white font-bold hover:bg-orange-500 transition-transform duration-300 transform hover:scale-110'
                                 target="_blank" rel='noreferrer'>
                                 Resume

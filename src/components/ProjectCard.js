@@ -6,42 +6,82 @@ function ProjectCard({ project, index }) {
   const { name, tools, description, githublink, image } = project;
   const cardRef = useRef(null);
   const isOnScreen = isElementVisible(cardRef);
-  const heightToStick = [7, 11, 15]
+
+  const heightToStick = [7, 11, 15];
 
   return (
-    <div ref={cardRef} className={`w-full md:w-[45%] border-2 border-black rounded-lg sticky overflow-hidden shadow-lg bg-gradient-to-br from-gray-900 to-black text-white`} style={{ top: `${heightToStick[index]}rem` }}>
-  <div className='flex items-center justify-between border-b-2 border-orange-400 p-4 text-orange-400'>
-    <a href={githublink} target='_blank' rel='noopener noreferrer'>
-      <img src={github} className='h-5 w-5 hover:scale-125 hover:rotate-45 transition-all duration-300 ease-in-out' alt="GitHub Link" />
-    </a>
-    <h2 className='flex-grow text-center font-bold text-xl font-playpen'>{name}</h2>
-  </div>
+    <div 
+      ref={cardRef} 
+      className={`group relative w-full md:w-[45%] bg-gradient-to-br from-slate-900 via-gray-900 to-black rounded-xl overflow-hidden border border-orange-400/20 hover:border-orange-400/50 shadow-xl hover:shadow-2xl hover:shadow-orange-400/10 transition-all duration-500 hover:scale-[1.02] sticky`}
+      style={{ top: `${heightToStick[index]}rem` }}
+    >
+      {/* Glowing background effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-400/5 via-transparent to-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      {/* Header */}
+      <div className='relative z-10 flex items-center justify-between p-4 border-b border-orange-400/30 bg-gradient-to-r from-orange-400/10 to-transparent'>
+        <h2 className='flex-grow text-center font-bold text-lg sm:text-xl font-playpen text-orange-400 group-hover:text-orange-300 transition-colors duration-300'>
+          {name}
+        </h2>
+        <a 
+          href={githublink} 
+          target='_blank' 
+          rel='noopener noreferrer'
+          className='ml-3 p-2 rounded-full bg-gray-800/50 hover:bg-orange-400/20 border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300 hover:scale-110'
+        >
+          <img src={github} className='h-4 w-4 sm:h-5 sm:w-5 filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300' alt="GitHub" />
+        </a>
+      </div>
 
-  <div className='p-5 flex justify-center items-center'>
-    <img src={image} alt="image" className='rounded-lg w-[80%] h-auto max-w-[25vw] max-h-[25vh]' />
-  </div>
+      {/* Project Image */}
+      <div className='relative p-4 sm:p-6 flex justify-center items-center bg-gradient-to-b from-transparent to-black/20'>
+        <div className='relative group/img'>
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-blue-400/20 rounded-lg opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 blur-sm"></div>
+          <img 
+            src={image} 
+            alt={`${name} preview`} 
+            className='relative z-10 rounded-lg w-full max-w-[280px] sm:max-w-[320px] h-auto object-cover shadow-lg group-hover/img:scale-105 transition-transform duration-300' 
+          />
+        </div>
+      </div>
 
-  <div className={`p-4`}>
-    <div className="mb-3">
-      <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left font-akaya ${isOnScreen ? 'visible' : ''}`}>Technologies Used:</h3>
-      <ul className={`flex flex-wrap gap-2 mt-2 animate-text-from-right font-sniglet ${isOnScreen ? 'visible' : ''}`}>
-        {tools.map((tool, index) => (
-          <li key={index} className='bg-orange-400 text-white rounded-full px-2 py-1 text-sm'>
-            {tool}
-          </li>
-        ))}
-      </ul>
+      {/* Content */}
+      <div className='relative z-10 p-4 sm:p-5 space-y-4'>
+        {/* Technologies */}
+        <div>
+          <div className='flex items-center gap-2 mb-3'>
+            <div className='w-1.5 h-1.5 bg-orange-400 rounded-full'></div>
+            <h3 className='text-sm sm:text-base text-orange-400 font-semibold uppercase tracking-wider'>Tech Stack</h3>
+          </div>
+          <div className='flex flex-wrap gap-2'>
+            {tools.map((tool, toolIndex) => (
+              <span 
+                key={toolIndex} 
+                className='px-3 py-1 text-xs sm:text-sm bg-gradient-to-r from-orange-400/20 to-orange-600/20 text-orange-300 rounded-full border border-orange-400/30 hover:border-orange-400/60 hover:from-orange-400/30 hover:to-orange-600/30 transition-all duration-300 cursor-default'
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Description */}
+        <div>
+          <div className='flex items-center gap-2 mb-3'>
+            <div className='w-1.5 h-1.5 bg-blue-400 rounded-full'></div>
+            <h3 className='text-sm sm:text-base text-blue-400 font-semibold uppercase tracking-wider'>Overview</h3>
+          </div>
+          <p className='text-gray-300 text-sm sm:text-base leading-relaxed font-sniglet'>
+            {description}
+          </p>
+        </div>
+
+        {/* Bottom accent line */}
+        <div className="pt-3 flex justify-center">
+          <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400/50 to-transparent"></div>
+        </div>
+      </div>
     </div>
-
-    <div>
-      <h3 className={`text-lg text-[#F0A500] font-semibold animate-text-from-left font-akaya ${isOnScreen ? 'visible' : ''}`}>Description:</h3>
-      <p className={`mb-4 animate-text-from-right font-sniglet ${isOnScreen ? 'visible' : ''}`}>
-        {description}
-      </p>
-    </div>
-  </div>
-</div>
-
   );
 }
 
