@@ -62,6 +62,26 @@ body {
   /* cursor: url('./assets/custom_cursor.png'),auto; */
 }
 
+/* Force animated cursor to be visible above all elements */
+.__react_component_tooltip {
+  z-index: 99999 !important;
+}
+
+/* Target the actual animated cursor elements */
+div[style*="position: fixed"][style*="pointer-events: none"] {
+  z-index: 99999 !important;
+}
+
+/* Specific targeting for react-animated-cursor */
+body > div:last-child {
+  z-index: 99999 !important;
+}
+
+/* Ensure cursor visibility on all elements */
+* {
+  cursor: auto !important;
+}
+
 
 .shadoweffect1{
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;

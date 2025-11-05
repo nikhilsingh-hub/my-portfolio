@@ -25,6 +25,7 @@ function App() {
         outerAlpha={0.2}
         innerScale={0.7}
         outerScale={5}
+        zIndex={9999}
         clickables={[
           'a',
           'input[type="text"]',
