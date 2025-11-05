@@ -93,6 +93,30 @@ class ConfigLoader {
     };
   }
 
+  // Get basic info section with dynamic values
+  getBasicInfoSection() {
+    const personalInfo = this.getPersonalInfo();
+    const basicInfo = this.config.basicInfoSection;
+    
+    // Helper function to replace placeholders
+    const replacePlaceholders = (text) => {
+      return text
+        .replace('{experience}', personalInfo.experience)
+        .replace('{recentEducation}', personalInfo.recentEducation)
+        .replace('{college}', personalInfo.college)
+        .replace('{location}', `${personalInfo.address.split(',')[0]}, ${personalInfo.address.split(',')[1]}`);
+    };
+
+    return {
+      ...basicInfo,
+      introText: replacePlaceholders(basicInfo.introText),
+      cards: basicInfo.cards.map(card => ({
+        ...card,
+        value: replacePlaceholders(card.value)
+      }))
+    };
+  }
+
   // Get about section data with resolved icons
   getAboutSection() {
     return {

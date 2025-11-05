@@ -10,6 +10,26 @@
     "resumeLink": "https://drive.google.com/file/d/1czYg_vC-1rYw9EB-vm8aL9Hc8w-2SZup/view?usp=drive_link",
     "funFact": "Coffee-to-code converter with a 99.9% uptime ☕"
   },
+  "basicInfoSection": {
+    "greeting": "Hello! 👋",
+    "introText": "{recentEducation} graduate from {college}. Backend Developer with {experience} of experience.",
+    "cards": [
+      {
+        "title": "Experience",
+        "value": "{experience}",
+        "description": "Years of coding experience"
+      },
+      {
+        "title": "Location",
+        "value": "{location}",
+        "description": "Current location"
+      }
+    ],
+    "resumeButton": {
+      "text": "Download Resume",
+      "altText": "Download Nikhil's Resume"
+    }
+  },
   "aboutSection": {
     "title": "About Me",
     "roles": [
@@ -57,9 +77,9 @@
         "designation": "Backend Developer",
         "isTechDetailsAvailable": true,
         "techStacks": [
-          { "name": "Magic Spells (Languages)", "stacks": "Java ☕, Linux 🐧" },
-          { "name": "Power Tools", "stacks": "SpringBoot 🚀, Hibernate 😴" },
-          { "name": "Arsenal of Awesomeness", "stacks": "AWS ☁️, Git 🌿, Jenkins 🤖, Kafka 📨, Redis ⚡, Kibana 📊, ELK Stack 🦌" }
+          { "name": "Programming Languages", "stacks": "Java ☕, Linux 🐧" },
+          { "name": "Frameworks & Technologies", "stacks": "SpringBoot 🚀, Hibernate 😴" },
+          { "name": "Tools & Infrastructure", "stacks": "AWS ☁️, Git 🌿, Jenkins 🤖, CI/CD 🔄, Kafka 📨, Redis ⚡, Kibana 📊, ELK Stack 🦌" }
         ]
       },
       {
@@ -69,10 +89,10 @@
         "designation": "Full-Stack Developer",
         "isTechDetailsAvailable": true,
         "techStacks": [
-          { "name": "Polyglot Powers", "stacks": "JavaScript 💛, Java ☕, C++ ⚡" },
-          { "name": "Framework Fu", "stacks": "Node.js 🟢, React ⚛️, Android Studio 🤖" },
-          { "name": "Data Kingdoms", "stacks": "MySQL 🐬, MSSQL 🏢, MongoDB 🍃" },
-          { "name": "Debugging Dojo", "stacks": "Wireshark 🦈, Postman 📮, Jira 📋, Kafka 📨, ELK Stack 🦌" }
+          { "name": "Programming Languages", "stacks": "JavaScript 💛, Java ☕, C++ ⚡" },
+          { "name": "Frameworks & Technologies", "stacks": "Node.js 🟢, React ⚛️, Android Studio 🤖" },
+          { "name": "Databases", "stacks": "MySQL 🐬, MSSQL 🏢, MongoDB 🍃" },
+          { "name": "Development Tools", "stacks": "Wireshark 🦈, Postman 📮, Jira 📋, Kafka 📨, ELK Stack 🦌" }
         ]
       }
     ]
@@ -80,6 +100,13 @@
   "projectsSection": {
     "title": "Projects",
     "projects": [
+      {
+        "name": "E-Commerce Beast 🛒⚡",
+        "image": "Ecomm.jpg",
+        "githubLink": "https://github.com/nikhilsingh-hub/Ecommerce-Backend",
+        "tools": ["Java ☕", "Spring Boot 🚀", "Docker 🐳", "Redis ⚡", "Prometheus 📊", "Custom Message Broker 📨"],
+        "description": "A comprehensive e-commerce backend system built with Java and Spring Boot. Features include product management, order processing, and a custom message broker for handling asynchronous operations. Implemented with Docker for containerization and includes monitoring with Prometheus and Redis for caching."
+      },
       {
         "name": "Chat App 💬",
         "image": "Chat.png",
@@ -93,13 +120,6 @@
         "githubLink": "https://github.com/nikhilsingh-hub/Food-Delivery-App",
         "tools": ["MERN Stack 🥞", "Payment Gateway 💳", "Redux Toolkit 🧰"],
         "description": "A full-stack food delivery application with user authentication, cart management, and payment gateway integration. Built using the MERN stack with Redux for state management. Focused on creating a smooth user experience from browsing to checkout."
-      },
-      {
-        "name": "E-Commerce Beast 🛒⚡",
-        "image": "Ecomm.jpg",
-        "githubLink": "https://github.com/nikhilsingh-hub/Ecommerce-Backend",
-        "tools": ["Java ☕", "Spring Boot 🚀", "Docker 🐳", "Redis ⚡", "Prometheus 📊", "Custom Message Broker 📨"],
-        "description": "A comprehensive e-commerce backend system built with Java and Spring Boot. Features include product management, order processing, and a custom message broker for handling asynchronous operations. Implemented with Docker for containerization and includes monitoring with Prometheus and Redis for caching."
       }
     ]
   },
