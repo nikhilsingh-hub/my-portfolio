@@ -2,29 +2,30 @@
   "personalInfo": {
     "name": "Nikhil Singh",
     "joiningDate": "2023-05-22",
-    "recentEducation": "Btech, ECE",
+    "recentEducation": "BTech, ECE",
     "college": "NIT Uttarakhand",
     "currentDesignation": "Backend Developer",
     "emailId": "nikhilsingh35911298@gmail.com",
     "address": "Noida, UttarPradesh, 844101",
-    "resumeLink": "https://drive.google.com/file/d/1czYg_vC-1rYw9EB-vm8aL9Hc8w-2SZup/view?usp=drive_link"
+    "resumeLink": "https://drive.google.com/file/d/1czYg_vC-1rYw9EB-vm8aL9Hc8w-2SZup/view?usp=drive_link",
+    "funFact": "Coffee-to-code converter with a 99.9% uptime ☕"
   },
   "aboutSection": {
-    "title": "About",
+    "title": "About Me",
     "roles": [
       {
-        "title": "Backend Developer",
-        "description": "Specialized in building scalable backend systems at Paytm with AWS, Redis caching, and Kafka. Achieved 30% infrastructure cost reduction through optimized caching architectures and performance tuning.",
+        "title": "Backend Developer 💻",
+        "description": "I work with Java, JavaScript, and C++ to build reliable backend systems. Love optimizing performance and making things run smoothly. Currently solving interesting problems with distributed systems and caching.",
         "icon": "backendLogo"
       },
       {
-        "title": "Full Stack Engineer",
-        "description": "Delivered end-to-end solutions handling 100,000+ daily requests. Expert in Node.js APIs, database optimization, and MERN stack applications deployed across 15,000+ UK schools.",
+        "title": "Full Stack Engineer 🔧",
+        "description": "From React frontends to Spring Boot APIs, I enjoy building complete solutions. I've worked on projects serving thousands of users and learned a lot from both successes and failures along the way.",
         "icon": "frontendLogo"
       },
       {
-        "title": "System Architect",
-        "description": "Designed distributed systems with custom message brokers, implemented CI/CD pipelines, and optimized search infrastructure using Elasticsearch. Published research in deep learning for medical applications.",
+        "title": "Continuous Learner 📚",
+        "description": "Always curious about new tech and better ways to solve problems. I've tackled 1500+ coding challenges, published some research, and I'm constantly experimenting with new tools and frameworks.",
         "icon": "uiLogo"
       }
     ]
@@ -56,22 +57,22 @@
         "designation": "Backend Developer",
         "isTechDetailsAvailable": true,
         "techStacks": [
-          { "name": "Programming Languages", "stacks": "Java, Linux" },
-          { "name": "Frameworks & Technologies", "stacks": "SpringBoot, Hybernate " },
-          { "name": "Tools", "stacks": "AWS, Git, Jenkins, CI/CD, Kafka, SQL, Redis, Kibana, ELK Stack, Jira, Wiki" }
+          { "name": "Magic Spells (Languages)", "stacks": "Java ☕, Linux 🐧" },
+          { "name": "Power Tools", "stacks": "SpringBoot 🚀, Hibernate 😴" },
+          { "name": "Arsenal of Awesomeness", "stacks": "AWS ☁️, Git 🌿, Jenkins 🤖, Kafka 📨, Redis ⚡, Kibana 📊, ELK Stack 🦌" }
         ]
       },
       {
         "companyName": "Valuable Group",
         "companyIcon": "valuablegroup.jpg",
-        "date": "MAY, 2023 - Present",
-        "designation": "Software Developer",
+        "date": "MAY, 2023 - Dec, 2024",
+        "designation": "Full-Stack Developer",
         "isTechDetailsAvailable": true,
         "techStacks": [
-          { "name": "Langugages", "stacks": "JavaScript, Java, C++" },
-          { "name": "Frameworks & Technologies", "stacks": "Node.js, React, Android Studio" },
-          { "name": "Databases", "stacks": "MySql, MSSQL, MongoDB" },
-          { "name": "Tools", "stacks": "Wireshark, Postman, Jira, Wiki, Kafka, ELK Stack" }
+          { "name": "Polyglot Powers", "stacks": "JavaScript 💛, Java ☕, C++ ⚡" },
+          { "name": "Framework Fu", "stacks": "Node.js 🟢, React ⚛️, Android Studio 🤖" },
+          { "name": "Data Kingdoms", "stacks": "MySQL 🐬, MSSQL 🏢, MongoDB 🍃" },
+          { "name": "Debugging Dojo", "stacks": "Wireshark 🦈, Postman 📮, Jira 📋, Kafka 📨, ELK Stack 🦌" }
         ]
       }
     ]
@@ -80,25 +81,25 @@
     "title": "Projects",
     "projects": [
       {
-        "name": "Chat App",
+        "name": "Chat App 💬",
         "image": "Chat.png",
         "githubLink": "https://github.com/nikhilsingh-hub/chatApp",
-        "tools": ["React", "MongoDb", "Nodejs", "Socket.io"],
-        "description": "Developed a resilient web chat application using the MERN stack and Socket.io for real-time communication."
+        "tools": ["React ⚛️", "MongoDB 🍃", "Node.js 🟢", "Socket.io ⚡"],
+        "description": "A real-time chat application built with the MERN stack and Socket.io. Features instant messaging, user authentication, and a clean interface. Great learning experience working with websockets and real-time data."
       },
       {
-        "name": "Food Delivery App",
+        "name": "Food Delivery App 🍕",
         "image": "FoodeUI.png",
         "githubLink": "https://github.com/nikhilsingh-hub/Food-Delivery-App",
-        "tools": ["MERN", "Payment Gateway"],
-        "description": "Created a food delivery app with user authentication, state management using Redux Toolkit, and an integrated payment gateway"
+        "tools": ["MERN Stack 🥞", "Payment Gateway 💳", "Redux Toolkit 🧰"],
+        "description": "A full-stack food delivery application with user authentication, cart management, and payment gateway integration. Built using the MERN stack with Redux for state management. Focused on creating a smooth user experience from browsing to checkout."
       },
       {
-        "name": "Distributed E-Commerce Processing Core",
+        "name": "E-Commerce Beast 🛒⚡",
         "image": "EmpTrackUI.png",
         "githubLink": "https://github.com/nikhilsingh-hub/Ecommerce-Backend",
-        "tools": ["Java", "Spring-boot", "MVC", "Docker", "Prometheus", "Redis", "Kibana", "SLF4J + Logback or Log4j2", " JUnit + Mockito"],
-        "description": "Java-based backend for an e‑commerce platform enabling sellers to publish products and users to search, browse, and place orders. Provides RESTful APIs for product management, search, cart and order workflows, and seller administration. Includes its own lightweight message broker for internal asynchronous processing (order events, notifications, inventory updates). Designed for extensibility and production readiness with persistence, validation, and authentication layers"
+        "tools": ["Java ☕", "Spring Boot 🚀", "Docker 🐳", "Redis ⚡", "Prometheus 📊", "Custom Message Broker 📨"],
+        "description": "A comprehensive e-commerce backend system built with Java and Spring Boot. Features include product management, order processing, and a custom message broker for handling asynchronous operations. Implemented with Docker for containerization and includes monitoring with Prometheus and Redis for caching."
       }
     ]
   },
